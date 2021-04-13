@@ -8,14 +8,14 @@ permalink:        pretty
 
 # Setup
 title:            Jeet Majumdar
-tagline:          'Full of Hope'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+tagline:          'Keep it coded'
+description:      'A place for the noobs!'
+url:              https://jeet-majumdar.github.io/live//
 baseurl:          '/live//' 
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Jeet'
+  url:            
 
 paginate:         5
 
@@ -23,7 +23,7 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/Jeet-Majumdar
 
 plugins:
         - jekyll-gist
