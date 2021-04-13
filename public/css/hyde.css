@@ -257,3 +257,13 @@ a.sidebar-nav-item:focus {
 .theme-base-0a-jeet .related-posts li a:hover {
   color: #1B615E;
 }
+
+
+/* Blue 2 Jeet */
+.theme-base-0b-jeet .sidebar {
+  background-color: #4e3e89;
+}
+.theme-base-0b-jeet .content a,
+.theme-base-0b-jeet .related-posts li a:hover {
+  color: #4e3e89;
+}
