@@ -53,7 +53,7 @@ The pattern of `commands` decides where and how the operations are to be perform
 - p = print
 - d = delete
 - s = substitute
-- `!` is to negate the range
+- ! = to negate the range
 
 **print**
 
