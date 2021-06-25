@@ -1,0 +1,10 @@
+---
+layout: page
+title: Research
+permalink: /research
+---
+
+
+{% for post in site.categories.Research %}
+ <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}

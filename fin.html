@@ -1,0 +1,10 @@
+---
+layout: page
+title: Fin
+permalink: /fin
+---
+
+
+{% for post in site.categories.Fin %}
+ <li><span>{{ post.date | date_to_string }}</span> &nbsp; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
