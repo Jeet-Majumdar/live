@@ -4,10 +4,6 @@ title: MNIST with PyTorch
 categories: [Tech]
 ---
 
-# MNIST with PyTorch
-
-
-
 Let's first understand the *"ground truth"*. How our actual data looks like which we intent to feed into the network. 
 
 In this work, we will be using the MNIST dataset in .csv format. 
