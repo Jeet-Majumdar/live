@@ -4,7 +4,7 @@ title: Chi-Squared Test
 categories: [Fin]
 ---
 
-Chi-Squared test will tell us that whether some observation is a random coincident or in fact a statistical significant result that can be applied or extrapolated on to the whole population. 
+Chi-Squared test will tell us that whether some observation is a random coincident or in fact a statistically significant result that can be applied or extrapolated on to the whole population. 
 
 To run a Chi-Squared test you can't use relative values (e.g. percentages), you have to use absolute values.
 
@@ -20,7 +20,7 @@ You will need to calculate:
 
   In Excel, this can be done with the function: *CHITEST(\<actual_range\>, \<expected_range\>)*
 
-Eg. 1
+Example:
 
 Let's say you have a table of observation:
 
@@ -31,7 +31,7 @@ Let's say you have a table of observation:
 
 Now you want to check whether the observations has any specific dependence on specie (here cat/dog). 
 
-So you ask the question "How would an ideal table look if there was no dependence on specie?" 
+So you ask the question "How would an ideal table look, if there was no dependence on specie?" 
 
 The answer to the above question is already very simple. You weight each specie population with the fraction of total positive population and fraction of total negative population. Doing this will give you a new table which we call as the Expectation table:
 
