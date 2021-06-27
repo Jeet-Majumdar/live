@@ -55,6 +55,8 @@ The pattern of `commands` decides where and how the operations are to be perform
 - s = substitute
 - ! = to negate the range
 
+By default, sed will print or delete or substitute according to the commands given bellow and print the output with the changes. You can direct the output to a new file. But, if you want to do these changes in the original file itself, supply `-i` option with the sed commands.
+
 **print**
 
 sed will do `echo` for matched lines by default. `-n` will suppress this action.
@@ -84,7 +86,6 @@ sed will do `echo` for matched lines by default. `-n` will suppress this action.
 - `sed 's/hello/This/i filename`: `i`, case insensitive
 
 - `sed -e 's/hello/This/' -e 's/dear/That/' filename`: Multiple sed
-
 
 
 ## cut
