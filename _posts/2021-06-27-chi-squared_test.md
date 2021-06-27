@@ -4,18 +4,21 @@ title: Chi-Squared Test
 categories: [Fin]
 ---
 
-
 Chi-Squared test will tell us that whether some observation is a random coincident or in fact a statistical significant result that can be applied or extrapolated on to the whole population. 
 
 To run a Chi-Squared test you can't use relative values (e.g. percentages), you have to use absolute values.
 
 You will need to specify:
 
-- significance level: A threshold value <u>below</u> which you believe something is significant highly correlated. Expressed in terms of percentage. We will use this to gauge p-value.
+- significance level
+
+  A threshold value <u>below</u> which you believe something is significant highly correlated. Expressed in terms of percentage. We will use this to gauge p-value.
 
 You will need to calculate:
 
 - p-value
+
+  In Excel, this can be done with the function: *CHITEST(\<actual_range\>, \<expected_range\>)*
 
 Eg. 1
 
@@ -51,8 +54,6 @@ While constructing, by default we assume that it is a random difference. The tes
 
 Ok, so then we need to calculate **p-value**. 
 
-In Excel, this can be done with the function: *CHITEST(<actual_range>, <expected_range>)*
-
 p-value for the above expectation and observation is: 1.75E-26
 
 Now, say our significance level is 0.05 (*i.e.* 5%) 
@@ -68,4 +69,5 @@ If p-value < sign_level:
 else:
 
 ​	"Independent"
+
 
