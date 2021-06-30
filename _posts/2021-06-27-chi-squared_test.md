@@ -6,13 +6,13 @@ categories: [Fin]
 
 Chi-Squared test will tell us that whether some observation is a random coincident or in fact a statistically significant result that can be applied or extrapolated on to the whole population. 
 
-To run a Chi-Squared test you can't use relative values (e.g. percentages), you have to use absolute values.
+To run a Chi-Squared test you can't use relative values (e.g. percentages), you have to use absolute values. Also, the categories must be mutually exclusive. 
 
 You will need to specify:
 
 - significance level
 
-  A threshold value <u>below</u> which you believe something is significant highly correlated. Expressed in terms of percentage. We will use this to gauge p-value.
+  A threshold value between 0 and 1 <u>below</u> which you believe something is significant enough or highly correlated. Expressed in terms of percentage. We will use this to gauge p-value.
 
 You will need to calculate:
 
