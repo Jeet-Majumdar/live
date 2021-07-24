@@ -23,6 +23,7 @@ The mean energy of a system is governed by the temperature, and if the system fa
 So in REMD (also called parallel tempering), we simulate two or more systems simultaneously at different temperatures. At certain intervals of time, we swap the systems following swap acceptance ratio and again proceed to carry out the simulation. The time interval between two swaps should be chosen such that the system equilibriates at a temperature properly, and the overall task is carried out till one has done enough sampling. 
 
 ![img](http://www.strodel.info/index_files/lecture/html/media/REMD.png)
+*Source: http://www.strodel.info/index_files/lecture/html/enhsampling_remd.html*
 
 With more swaps from higher temperature to a lower temperature, the possibility of sampling the system at or near the rare event increases. This apparently strange technique of sampling is justified because the replicas are exchanged following metropolis algorithms.  
 
@@ -31,12 +32,14 @@ $P(\beta U(x))$ is the probability of finding the system with energy $U(x)$.
 Any scheme that satisfies detailed balance forms a Markov chain whose stationary distribution is the target ensemble. 
 
 Thus we are safe as long as we do the swapping abiding the relation:
+
 $$
 P(\beta, U(x))P((\beta, U(x)) ->  (\beta', U(x))) = P(\beta', U(x))P((\beta', U(x)) ->  (\beta, U(x)))
 $$
+
 But in MD, the system's $U(x)$ will vary with temperature. Therefore, we have to choose a gradient of temperature such that the spacing between the temperatures provide overlapping distribution of U(x). Then swaps are made between the structures of nearest temperature following the Boltzmann acceptance ratio. 
 
 A very fine gradient of temperature is desirable as this will increase the chances of swaps and enhance the sampling. However, from a practical point of view, this will again increase the resource requirement by a huge number and make the technique less effective; as usually each replicas are assigned 1/2 cores of processors in normal practice.  Again if the temperature gradient is very course, then the occurrence of overlapping energy will reduce thereby rejecting most swaps which essentially leads normal MD simulations. Therefore judicious choice of temperature points must be made along with a tolerance. It is a general practice to choose temperatures in geometric progression, and typically the exponential function has been used in many works [$T(i)=T_{0}e^{k*i}$]. The exchange rate of replicas is an important quantity. "Typically 0.2 to 0.3 is good". 
 
-You may enjoy a better and elaborate explanation of the process in [this](https://gpantel.github.io/computational-method/MSST/) blog.  
+You may enjoy a better and elaborate explanation of the process in <u>[this](https://gpantel.github.io/computational-method/MSST/)</u> blog.  
 
