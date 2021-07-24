@@ -41,5 +41,5 @@ But in MD, the system's $U(x)$ will vary with temperature. Therefore, we have to
 
 A very fine gradient of temperature is desirable as this will increase the chances of swaps and enhance the sampling. However, from a practical point of view, this will again increase the resource requirement by a huge number and make the technique less effective; as usually each replicas are assigned 1/2 cores of processors in normal practice.  Again if the temperature gradient is very course, then the occurrence of overlapping energy will reduce thereby rejecting most swaps which essentially leads normal MD simulations. Therefore judicious choice of temperature points must be made along with a tolerance. It is a general practice to choose temperatures in geometric progression, and typically the exponential function has been used in many works [$T(i)=T_{0}e^{k*i}$]. The exchange rate of replicas is an important quantity. "Typically 0.2 to 0.3 is good". 
 
-You may enjoy a better and elaborate explanation of the process in [this](https://gpantel.github.io/computational-method/MSST/) blog.  
+You may enjoy a better and elaborate explanation of the process in [<u>this</u>](https://gpantel.github.io/computational-method/MSST/) blog.  
 
