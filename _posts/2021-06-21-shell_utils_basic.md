@@ -95,3 +95,13 @@ sed will do `echo` for matched lines by default. `-n` will suppress this action.
 - `cut -d ',' -f1,6 filename`: Get the first and the sixth columns
 - `cut -d ':' -f5-7 filename`: Get the fifth to the seventh columns with delimeter `:`
 - `cut -d ',' -f2 --complement filename`: Get all columns other than the 2nd
+
+## paste
+
+`paste` command helps to merge files in parallel (default) or sequential  
+
+- `paste animal.dat sound.dat > animal_sound.dat`: Joins the two files animal.dat and sound.dat side by side with a space  (default) separating them as delimiter
+- `paste -d "|" animal.dat sound.dat > animal_sound.dat`  Joins the two files animal.dat and sound.dat side by side with a "|" separating them as delimiter
+
+- `paste -s animal.dat sound.dat > animal_sound.dat`  Joins the two files animal.dat and sound.dat one after the other in two different rows
+- `paste -s -d ":" animal.dat sound.dat > animal_sound.dat`  Joins the two files animal.dat and sound.dat one after the other in two different rows, as well as ":" as a delimiter between each elements of animal.dat and sound.dat
