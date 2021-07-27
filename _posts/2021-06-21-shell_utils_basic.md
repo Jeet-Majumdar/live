@@ -17,6 +17,8 @@ categories: [Tech]
 - `$0`: content of current row
 - `$1`: the first column of the content 
 - `OFS` is Output Field Separator
+- `-v `to define a variable. (Very useful in case you want to search a pattern)
+- `-F` to specify delimiter
 
 It works in 3 steps:
 
@@ -37,6 +39,14 @@ It works in 3 steps:
 3. `awk -F"," 'BEGIN{getline} min > $3 {min = $3; minline=$0} END{print minline}' file.csv`: 
 
    Calculate the max of column 3 of a ',' separated file; print this line
+   
+4. `awk -v pat=${pattern}" -F "," '$2 ~ pat{print $0}' file.csv`: 
+
+   Return rows of a "," separated file (file.csv)  wherever the 2nd row matches the pattern `pat` - which is defined by another variable `pattern`
+
+5. `awk -v pat=${pattern}" -F "," '$2 ~ pat{print $4 " " $5}' file.csv`: 
+
+   Return 4th and 5th column of a "," separated file (file.csv)  wherever the 2nd row matches the pattern `pat` - which is defined by another variable `pattern`
 
 
 
