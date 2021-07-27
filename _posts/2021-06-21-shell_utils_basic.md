@@ -40,11 +40,11 @@ It works in 3 steps:
 
    Calculate the max of column 3 of a ',' separated file; print this line
    
-4. `awk -v pat=${pattern}" -F "," '$2 ~ pat{print $0}' file.csv`: 
+4. `awk -v "pat=${pattern}" -F "," '$2 ~ pat{print $0}' file.csv`: 
 
    Return rows of a "," separated file (file.csv)  wherever the 2nd row matches the pattern `pat` - which is defined by another variable `pattern`
 
-5. `awk -v pat=${pattern}" -F "," '$2 ~ pat{print $4 " " $5}' file.csv`: 
+5. `awk -v "pat=${pattern}" -F "," '$2 ~ pat{print $4 " " $5}' file.csv`: 
 
    Return 4th and 5th column of a "," separated file (file.csv)  wherever the 2nd row matches the pattern `pat` - which is defined by another variable `pattern`
 
