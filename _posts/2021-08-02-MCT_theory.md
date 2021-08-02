@@ -123,17 +123,29 @@ For the time being it suffices to know that:
 
 
 If we allow these approximations then we can arrive at the full MCT equation (by equating the lower-left side of the matrix equation):
+
+
 $$
 \frac{d^2F(k,t)}{dt^2} + \frac{k_BTk^2}{mS(k)}F(k,t) + \int_0^t  ds K_{MCT} \frac{dF(k, t-s)}{dt} = 0
 $$
+
+
 with the memory function as,
+
+
 $$
 K_{MCT}(k,t) = \frac{\rho k_B T}{16 \pi^3 m} \int d\textbf{q} |V_{\textbf{q, k-q}}|^2 F(q,t) F(|\textbf{k-q}|,t)
 $$
+
+
 with 
+
+
 $$
 V_{\textbf{q, k-q}} = k^{-1} [(\textbf{k.q}) c(q) + \textbf{k}\cdot (\textbf{k-q}) c(|\textbf{k-q}|)]
 $$
+
+
 which is referred as vertices with $c(k) = \rho^{-1}[1-1/S(k)]$
 
 Here, $k_B$ is the Boltzmann constant, $m$ is the particle mass, $\rho$ is the bulk density
