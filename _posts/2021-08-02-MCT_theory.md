@@ -188,7 +188,7 @@ $$
 $$
 where $\Gamma$ is the Gamma function.
 
-During $\alpha$ relaxation, the final decay of F(k, t) has the functional form of $e^{(\frac{-t}{\tau})^{\beta}}$. Where $\beta$ is a value between 0 and 1 (inclusive)
+During $\alpha$ relaxation, the final decay of F(k, t) has the functional form of $e^{(\frac{-t}{\tau})^{\beta}}$. Where $\beta$ is a value between 0 and 1 (inclusive). Known as Kohlrausch (stretched exponential) behavior. 
 
 ![img](https://www.frontiersin.org/files/Articles/403911/fphy-06-00097-HTML/image_m/fphy-06-00097-g007.jpg)
 
