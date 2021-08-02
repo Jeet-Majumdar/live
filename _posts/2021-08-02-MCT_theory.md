@@ -50,7 +50,7 @@ Steps to derive the MCT equation:
    $$
    This projection operator is constructed in such a way so that $P_A X$ will project X onto A(0)
 
-3. With the above two, we can write equation of the classical function of phase space variable X. 
+3. With the above two, we can write equation of the classical function of phase space variable A. 
 
    $A(t)  = e^{iLt}A(0)$
 
