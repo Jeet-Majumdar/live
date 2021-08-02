@@ -10,7 +10,7 @@ As a liquid is cooled down, it will eventually go bellow its freezing point when
 
 Glass transition temperature (T<sub>g</sub>) is this temperature at which if we suddenly cool a liquid, viscosity exceeds a value of 10<sup>12</sup> Pa.s, or the structural relaxation time (τ) exceeds 100 s.  The question that puzzled researchers were, how the viscosity (which is definitely related to some time scale of motion) show such dramatic change within the time of cooling without letting the average structure to change almost by any amount. Another interesting unknown quantity was the different timescale of motions associated with the phenomena of this glass transition. How are they related to the thermodynamic variables and what made them different for different particle size and composition. The answers to the above questions can be partially explained by MCT. 
 
-For the impatient ones: the MCT predicts the dynamic, given time-independent information as input [namely, static structure factor (S(k)) and bulk density $\rho$]. One needs to solve the MCT equation itteratively in order to get the solution under some assumption. (Why assumption? Well, as it will turn out that the exact MCT equation is impossible to solve otherwise!) 
+For the impatient ones: the MCT predicts the dynamic, given time-independent information as input [namely, static structure factor (S(k)) and bulk density $\rho$]. One needs to solve the MCT equation iteratively in order to get the solution under some assumption. (Why assumption? Well, as it will turn out that the exact MCT equation is impossible to solve otherwise!) 
 
 Let's have some realisation through numbers and figures. A normal liquid has a viscosity of about 10<sup>-3</sup> Pa.s, whereas the viscosity of a glassy solid is about 10<sup>12</sup> Pa.s. The structure of the material in different phases is given in the following figure:
 
@@ -34,12 +34,20 @@ In case of glassy solid, the onset time of $\alpha$ relaxation relaxation is ver
 
 Steps to derive the MCT equation:
 
-1. We start with writing a correlation matrix of spatial density ($\rho(\textbf{k}, t)$) and current density modes  ($j(\textbf{k}, t)$) ( time derivative of spatial density): $C_{\alpha \beta} = \left < A_{\alpha}(0)|A_{\beta}(t)\right >$ where $A = \begin{pmatrix} \rho(\textbf{k}, t)\\ j(\textbf{k}, t) \end{pmatrix}$. 
+1. We start with writing a correlation matrix of spatial density ($\rho(\textbf{k}, t)$) and current density modes  ($j(\textbf{k}, t)$) ( time derivative of spatial density): 
+   $$
+   C_{\alpha \beta} = \left < A_{\alpha}(0)|A_{\beta}(t)\right >
+   $$
+   $ where $
+   $$
+   A = \begin{pmatrix} \rho(\textbf{k}, t)\\ j(\textbf{k}, t) \end{pmatrix}
+   $$
 
 2. Using C and A we define a projection operator $P_A$ 
 
-   $P_A = \sum_{\alpha, \beta} |A_{\alpha}> [C(0)]^{-1}_{\alpha \beta} <A_{\beta}|$ 
-
+   $$
+   P_A = \sum_{\alpha, \beta} |A_{\alpha}> [C(0)]^{-1}_{\alpha \beta} <A_{\beta}|
+   $$
    This projection operator is constructed in such a way so that $P_A X$ will project X onto A(0)
 
 3. With the above two, we can write equation of the classical function of phase space variable X. 
@@ -68,7 +76,7 @@ Steps to derive the MCT equation:
    $$
    i\Omega = \left < A(0)^{*}|iLA(0) \right > \cdot \left < A(0)^{*}|A(0) \right >^{-1}
    $$
-   
+
    $$
    K(t) = \left < f(0)^{*}|f \right > \cdot \left < A(0)^{*}|A(0) \right >^{-1}
    $$
@@ -94,7 +102,7 @@ For the time being it suffices to know that:
 
 - The memory function K(t) is given by the time-auto-correlation function of the fluctuating force f(t).
 - "K(t) and f (t) embody how our slow variable A–which at time t = 0 lives strictly in the slow subspace–will gradually evolve under the influence of the rest of the universe"  
-- Equation 1 and 6 are called Generalized Langevin Equation. 
+- Equation 4 and 8 are called Generalized Langevin Equation. 
 - Till this far, every thing is exact and it is impossible to go any further without some approximations.
 
 
@@ -132,7 +140,7 @@ Here, $k_B$ is the Boltzmann constant, $m$ is the particle mass, $\rho$ is the b
 
 
 
-Equation 8 can be solved just like any other self-consistent equation with the boundary condition being: 
+Equation 11 can be solved just like any other self-consistent equation with the boundary condition being: 
 
 $F(k, 0)/S(k) = 1$ and $\dot{F}(k, 0) = 0$
 
@@ -162,11 +170,13 @@ Substituting $K_{MCT} = a \delta$ the schematic MCT equation becomes identical t
 
 However, as we will see that the quadratic form of $K_{MCT} = ax^2(t)$ , is what makes MCT successful in treating liquid glass transition. 
 
-Eqaution 12 can be solved with the quadratic form of $K_{MCT} = ax^2(t)$ in an itterative self-consistent way and the results show strong feedback mechanism depending on "a" that drives the transition.
+Equation 12 can be solved with the quadratic form of $K_{MCT} = ax^2(t)$ in an iterative self-consistent way and the results show strong feedback mechanism depending on "a" that drives the transition.
 
 
 
-![FIGURE 6 | Solutions x(t) for a damped harmonic oscillator, x(t)+ 2x(t)+ ax(t) = 0 (dashed lines), and for a schematic MCT equation, x(t)+ 2x(t)+ a t 0 x 2(t s)x(s)ds = 0 (solid lines), with 2 = 1 and a = 2. Note the logarithmic scale for the time axis. As the damping a is increased, the MCT solution exhibits a highly non-linear slowdown and becomes non-ergodic for damping values a 4, signaling the formation of a glass. For the damped harmonic oscillator, the solutions for a = 3.99 and a = 4 are indistinguishable on the scale of this figure.](https://d3i71xaburhd42.cloudfront.net/a4a48853a8b3c837ab5188e101820392223d1d14/9-Figure6-1.png)
+![Schematic_MCT_solution](https://d3i71xaburhd42.cloudfront.net/a4a48853a8b3c837ab5188e101820392223d1d14/9-Figure6-1.png)
+
+
 
 *Ref:* *https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full*
 
