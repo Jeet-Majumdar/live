@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mode Coupling Theory (MCT): A short note
+title: Mode Coupling Theory (MCT)- A short note
 categories: [Research]
 ---
 
