@@ -14,7 +14,7 @@ For the impatient ones: the MCT predicts the dynamic, given time-independent inf
 
 Let's have some realisation through numbers and figures. A normal liquid has a viscosity of about 10<sup>-3</sup> Pa.s, whereas the viscosity of a glassy solid is about 10<sup>12</sup> Pa.s. The structure of the material in different phases is given in the following figure:
 
-![structure_phases](https://mini.physics.sunysb.edu/~marivi/TEACHING-OLD/PHY313/lib/exe/fetch.php?w=300&media=lectures:scattering-gas-crystal.jpg)
+![structure_phases]({{site.baseurl}}/assets/img/2021-08-02-MCT_theory_img_1.jpg)
 
 *Ref:* *https://mini.physics.sunysb.edu/~marivi/TEACHING-OLD/PHY313/doku.php?id=lectures:8*
 
@@ -212,6 +212,24 @@ where $\Gamma$ is the Gamma function.
 
 During $\alpha$ relaxation, the final decay of F(k, t) has the functional form of $e^{(\frac{-t}{\tau})^{\beta}}$. Where $\beta$ is a value between 0 and 1 (inclusive). Known as Kohlrausch (stretched exponential) behavior. 
 
+The variation of $\tau_{\alpha}$ with temperature (T) shows two kinds of dependence for two group of glass forming liquids. The kind which shows Arrhenius temperature dependence with $T$ is fitted with the functional form:
+$$
+\tau_{\alpha} = \tau_0 e^{\frac{E_a}{k_B T}}
+$$
+is called *"Strong liquids"*
+
+The other kind of temperature dependence which is fitted with the form:
+$$
+\tau_{\alpha} = \tau_0 e^{\frac{E_a}{k_B (T-T_0)}}
+$$
+
+
+ is called *"fragile liquid"* and designated as Vogel–Fulcher–Tammann (VFT) temperature dependence.
+
+$E_a$ is the activation energy which is a measure of the fragility [the degree to which the relaxation time increases as $T_g$ (the experimental glass transition temperature) is approached]
+
+
+
 ![img](https://www.frontiersin.org/files/Articles/403911/fphy-06-00097-HTML/image_m/fphy-06-00097-g007.jpg)
 
 *Ref:* https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full
@@ -223,3 +241,5 @@ This write-up was meant to provide a rough idea of the concept, and also compile
 - Janssen, Liesbeth. "Mode-coupling theory of the glass transition: A primer." *Frontiers in Physics* 6 (2018): 97.
 - Reichman, David R., and Patrick Charbonneau. "Mode-coupling theory." *Journal of Statistical Mechanics: Theory and Experiment* 2005.05 (2005): P05013.
 - Flenner, Elijah, and Grzegorz Szamel. "Relaxation in a glassy binary mixture: Comparison of the mode-coupling theory to a Brownian dynamics simulation." *Physical Review E* 72.3 (2005): 031508.
+- Debenedetti, Pablo G., and Frank H. Stillinger. "Supercooled liquids and the glass transition." *Nature* 410.6825 (2001): 259-267.
+- Swenson, Jan, and Silvina Cerveny. "Dynamics of deeply supercooled interfacial water." *Journal of Physics: Condensed Matter* 27.3 (2014): 033102.

@@ -91,3 +91,7 @@ To study reactive chemistry in medium to large systems, DFT is at present the be
 To study nonbonded interactions and internal conformational energetics in both small and large systems MP2 methods are generally used. Systems containing a few hundred atoms are treated routinely with MP2. This helps in the development in molecular force-fields. 
 
 
+
+- Friesner, Richard A. "Ab initio quantum chemistry: Methodology and applications." *Proceedings of the National Academy of Sciences* 102.19 (2005): 6648-6653.
+
+- Hafner, J., Wolverton, C., & Ceder, G. (2006). Toward Computational Materials Design: The Impact of Density Functional Theory on Materials Research. *MRS Bulletin,* *31*(9), 659-668. doi:10.1557/mrs2006.174
