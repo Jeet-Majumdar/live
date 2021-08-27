@@ -172,6 +172,7 @@ where the one-dimensional damped harmonic oscillator has the form:
 $$
 \ddot{x}(t) + \omega^{2}x(t) + \int_{0}^{t} K_{MCT}(s) \dot{x}(t-s) ds = 0
 $$
+
 I believe that the above comparison was sufficient enough to justify the names given to $\Omega$ and $K(t)$ 
 
 Equation 12 is called **schematic MCT model**.
@@ -235,6 +236,101 @@ $E_a$ is the activation energy which is a measure of the fragility [the degree t
 *Ref:* https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full
 
 The figure above shows the relevant regions along with the predictions of MCT.
+
+A naive C++ and python implementation to solve the schematic MCT model is given below:
+
+```c++
+#include <bits/stdc++.h>
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <fstream>
+#include <sstream>
+
+#define iter 1000000
+#define del_t 0.0001
+
+using namespace std;
+using std::ifstream;
+
+int main()
+{
+
+int i,j ;
+double x[iter]={0};
+double v[iter]={0};
+double omega = 1 ;
+double A = 1 ;
+double a ; 
+double Int ;
+
+
+ofstream F_file;
+string filename2;
+filename2 = "output.txt";
+F_file.open(filename2.c_str(), ios::out);
+
+x[0] = 1 ;
+v[0] = 0 ;
+ 
+for(i=0;i<iter;i++){
+
+	x[i+1] = x[i] + v[i] * del_t ;
+       
+        Int = 0 ;
+         
+        for( j = 0 ; j < i; j++ )
+        {
+        	Int = Int + x[j] * x[j] * v[i-j] * del_t ;
+        } 
+          
+        a = -omega * omega * x[i] - A * Int ; 
+                 
+	v[i+1] = v[i] + a * del_t ;
+	
+	F_file << i * del_t << "   " << x[i] << endl ;
+
+}
+
+F_file.close();
+
+return 0;
+
+}
+```
+
+
+
+```python
+import matplotlib.pyplot as plt
+# List Implementation:
+
+itterations = 1000000
+delta_t = 0.0001
+omega = 1
+a = 5
+
+x = [1]
+v = [0]
+time = [0]
+
+for i in range(0, itterations):
+    x.append(x[i] + v[i]*delta_t)
+    
+    Int = 0.0
+    for j in range(0, i):
+        Int = Int + x[j]*x[j]*v[i - j]*delta_t
+    
+    v.append(v[i]+ (-omega * omega * x[i] - a * Int) * delta_t)
+    time.append(i * delta_t)
+    
+    #print(i*delta_t, x[i-1])
+    
+plt.plot(time, x)
+plt.show()
+```
+
+
 
 This write-up was meant to provide a rough idea of the concept, and also compiled with the intent of brushing up the concept in any future time. For an even more in-depth view of MCT, please refer to the following articles:
 
