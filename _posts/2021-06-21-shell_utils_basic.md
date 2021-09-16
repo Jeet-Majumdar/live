@@ -90,12 +90,20 @@ sed will do `echo` for matched lines by default. `-n` will suppress this action.
 **substitute**
 
 - `sed 's/hello/This/g' filename`: `g`, Global
+
 - `sed 's/hello/This/' filename`: Substitute only the first occurrance
+
 - `sed 's/hello/This/2 filename`: Substitute the second occurrance
+
 - `sed -n 's/hello/This/2p' filename`: Print the substituting lines
+
 - `sed 's/hello/This/i filename`: `i`, case insensitive
 
 - `sed -e 's/hello/This/' -e 's/dear/That/' filename`: Multiple sed
+
+- `sed -i 44,50's/\S\+/'"JEET"'/9' filename` : From line-number 44 to 50 (inclusive), substitute the 9th column of the file with "JEET". 
+
+  The line numbers, column number and substituting value can be specified with variables externally defined. 
 
 
 ## cut

@@ -93,5 +93,5 @@ To study nonbonded interactions and internal conformational energetics in both s
 
 
 - Friesner, Richard A. "Ab initio quantum chemistry: Methodology and applications." *Proceedings of the National Academy of Sciences* 102.19 (2005): 6648-6653.
-
 - Hafner, J., Wolverton, C., & Ceder, G. (2006). Toward Computational Materials Design: The Impact of Density Functional Theory on Materials Research. *MRS Bulletin,* *31*(9), 659-668. doi:10.1557/mrs2006.174
+- Keith, John A., et al. "Combining machine learning and computational chemistry for predictive insights into chemical systems." *arXiv preprint arXiv:2102.06321* (2021). https://pubs.acs.org/doi/pdf/10.1021/acs.chemrev.1c00107 
