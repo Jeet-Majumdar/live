@@ -122,3 +122,17 @@ sed will do `echo` for matched lines by default. `-n` will suppress this action.
 - `paste -d "|" animal.dat sound.dat > animal_sound.dat` : Joins the two files animal.dat and sound.dat side by side with a "\|" separating them as delimiter
 - `paste -s animal.dat sound.dat > animal_sound.dat` : Joins the two files animal.dat and sound.dat one after the other in two different rows
 - `paste -s -d ":" animal.dat sound.dat > animal_sound.dat` : Joins the two files animal.dat and sound.dat one after the other in two different rows, as well as ":" as a delimiter between each elements of animal.dat and sound.dat
+
+## find
+
+`find` command helps to find a file or folder from a specific location or on the entire system
+
+```
+find [where to start searching from]
+ [expression determines what to find] [-options] [what to find]
+```
+
+- `find /sscu_gpfs/home/jeet/Install -name 'readline.h'`: find the file name *readline.h* in the directory */sscu_gpfs/home/jeet/Install*
+- `find /sscu_gpfs/home/jeet/Install -empty` : Search for empty files and directories inside the folder */sscu_gpfs/home/jeet/Install*
+- `find ./jeet -perm 777` :  Search for file with entered permissions 777
+- `find ./jeet -type f -name "*.txt" -exec grep 'Geek'  {} \;` : This command print lines of files ending with *.txt* inside the directory *.jeet* which have ‘Geek’ in them and ‘-type f’ specifies the input type is a file.
