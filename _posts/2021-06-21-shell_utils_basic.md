@@ -136,3 +136,7 @@ find [where to start searching from]
 - `find /sscu_gpfs/home/jeet/Install -empty` : Search for empty files and directories inside the folder */sscu_gpfs/home/jeet/Install*
 - `find ./jeet -perm 777` :  Search for file with entered permissions 777
 - `find ./jeet -type f -name "*.txt" -exec grep 'Geek'  {} \;` : This command print lines of files ending with *.txt* inside the directory *.jeet* which have ‘Geek’ in them and ‘-type f’ specifies the input type is a file.
+
+
+
+A cheatsheet of bash commands can be found [here](https://devhints.io/bash). This is a pretty good resource of many other cheetsheets so do check out the site!
