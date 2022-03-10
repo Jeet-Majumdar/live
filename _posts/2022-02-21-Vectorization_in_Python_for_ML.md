@@ -6,6 +6,12 @@ categories: [Tech]
 
 **Vectorization in Python for ML**
 
+Adding a new dimension to a numpy array:
+
+```python
+image_array = image_array[..., np.newaxis]
+```
+
 Using : SIMD - Single Instruction Multiple Data
 
 Lets say your data has the following structure:
