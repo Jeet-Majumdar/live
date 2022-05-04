@@ -8,7 +8,7 @@ categories: [Tech]
 
 npx is a package runner that gets installed when one installs node.
 
-`npx create-react-ap <project-name>`
+`npx create-react-app <project-name>`
 
 **npm**
 
