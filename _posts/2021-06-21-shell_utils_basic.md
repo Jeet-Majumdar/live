@@ -14,6 +14,7 @@ categories: [Tech]
 
 - `NR`: number of current row
 - `NF`: number of fields, default delimeter is space 
+- `FNR`: stores the number of records read from the *current* file being processed
 - `$0`: content of current row
 - `$1`: the first column of the content 
 - `OFS` is Output Field Separator
@@ -48,7 +49,8 @@ It works in 3 steps:
 
    Return 4th and 5th column of a "," separated file (file.csv)  wherever the 2nd row matches the pattern `pat` - which is defined by another variable `pattern`
 
-
+A lot more on awk here: [Click Here!](https://backreference.org/2010/02/10/idiomatic-awk/)
+Example: Two-file processing 
 
 ## sed
 
