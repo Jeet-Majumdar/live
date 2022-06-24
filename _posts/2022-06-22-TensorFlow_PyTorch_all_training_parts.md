@@ -9,13 +9,13 @@ categories: [Tech]
 **TensorFLow**
 
 ```python
-tensorflow.keras.datasets
+import tensorflow.keras.datasets
+import tensorflow_datasets as tfds
 ```
 
 **PyTorch**
 
 ```python
-from torch.utils.data import Dataset
 from torchvision import datasets
 ```
 
@@ -26,8 +26,51 @@ from torchvision import datasets
 **TensorFlow**
 
 ```python
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.preprocessing.image import img_to_array, load_img
+from tensorflow.keras.utils import image_dataset_from_directory
+from tensorflow.keras import layers # Then use like layers.RandomFlip("horizontal_and_vertical"), layers.RandomRotation(0.2), layers.Rescaling(1./255) etc. while building the model itself.
+
+from tensorflow.keras.preprocessing.image import ImageDataGenerator # depricated
+from tensorflow.keras.preprocessing.image import img_to_array, load_img # depricated
+
+from tensorflow.keras.utils import text_dataset_from_directory
+from tensorflow.keras import layers # Then use like layers.TextVectorization("Some random text!") etc.
+
+from tensorflow.keras.preprocessing.text import text_to_word_sequence, hashing_trick, one_hot   # depricated
+from tensorflow.keras.preprocessing.sequence import make_sampling_table, pad_sequences, skipgrams # depricated
+
+
+
+train_datagen = text_dataset_from_directory(
+                directory,
+                labels='inferred',
+                label_mode='int',
+                class_names=None,
+                batch_size=32,
+                max_length=None,
+                shuffle=True,
+                seed=None,
+                validation_split=None,
+                subset=None,
+                follow_links=False
+            )
+
+train_datagen = image_dataset_from_directory(
+                directory,
+                labels='inferred',
+                label_mode='int',
+                class_names=None,
+                color_mode='rgb',
+                batch_size=32,
+                image_size=(256, 256),
+                shuffle=True,
+                seed=None,
+                validation_split=None,
+                subset=None,
+                interpolation='bilinear',
+                follow_links=False,
+                crop_to_aspect_ratio=False,
+                **kwargs
+            )
 
 train_datagen = ImageDataGenerator(rescale=1.0/255,
                                      rotation_range=40,
@@ -49,7 +92,8 @@ train_datagen = ImageDataGenerator(rescale=1.0/255,
 
 **PyTorch**
 
-```pyth
+```python
+from torchvision.utils.data import DataLoader
 from torchvision.transforms import ToTensor, Lambda
 
 training_data = datasets.FashionMNIST(
@@ -70,7 +114,7 @@ train_features, train_labels = next(iter(train_dataloader))
 
 **TensorFlow**
 
-```pytho
+```python
 model = tf.keras.models.Sequential([
       tf.keras.layers.Conv2D(32, (3,3), activation='relu', input_shape=(150, 150, 3)),
       tf.keras.layers.MaxPooling2D(2, 2),
