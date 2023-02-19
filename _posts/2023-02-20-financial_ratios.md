@@ -45,7 +45,7 @@ ii. Profitability ratio based on ROI
 
 These types of profitability ratios are very well explained in the following picture:
 
-![types_of_profitability_ratios](/home/jeet/Videos/profitability_ratio.png)
+![types_of_profitability_ratios]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/profitability_ratio.png)
 
 
 
@@ -122,7 +122,7 @@ wherein,
 
 Before going to the next section, here we put some of the core concepts regarding Capital Employed. These come from the Accounting Equation
 
-![accounting_equation](/home/jeet/Videos/accounting_equation.png)
+![accounting_equation]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/accounting_equation.png)
 
 In the above, EBIT means Earnings before Income and Tax
 
@@ -138,7 +138,7 @@ An activity ratio is a type of financial metric that indicates how efficiently a
 
 Activity ratios are also referred to as **Efficiency ratios** or **Performance ratios** or **Turnover ratios**.
 
-![activity_ratios](/home/jeet/Videos/activity_ratios.png)
+![activity_ratios]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/activity_ratios.png)
 
 **Debtors Turnover Ratio**
 
@@ -319,7 +319,7 @@ There are two types of leverage ratios:
 i. Capital Structure Ratios
 ii. Coverage Ratios
 
-![leverage_ratio](/home/jeet/Videos/leverage_ratio.png)
+![leverage_ratio]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/leverage_ratio.png)
 
 
 
@@ -451,7 +451,7 @@ One of the major limitation is that it <u>does not consider intangible assets li
 2. The two ratios may seem to be very similar, but the PEG ratio is able to take into account future earnings growth.
 3. A rule of thumb is that any PEG ratio below 1.0 is considered to be a good value.
 
-![peg_ratio](/home/jeet/Videos/peg_ratio.png)
+![peg_ratio]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/peg_ratio.png)
 
 -----------
 
@@ -463,7 +463,7 @@ The Du-Pont analysis or the Return On Equity ratio essentially measures the rate
 
 **ROE** = Net Income / Shareholders Equity
 
-![dupont_analysis](/home/jeet/Videos/dupont_analysis.png)
+![dupont_analysis]({{site.baseurl}}/assets/img/2023_02_20_financial_ratios/dupont_analysis.png)
 
 
 
