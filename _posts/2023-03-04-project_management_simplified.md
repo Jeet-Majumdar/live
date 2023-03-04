@@ -23,12 +23,7 @@ Twelve (12) steps to Managing Project Successfully:
 The first 8 are planning and the last 3 are actions. 
 
 The Iron Triangle:
-```mermaid
-graph LR;
-A((Quality))--> B((Cost));
-B --> C((Time));
-C --> A((Quality));
-```
+![iron_triangle]({{site.baseurl}}/assets/img/2023-03-04-project_management_iron_triangle.jpg)
 1. Quality
 2. Cost
 3. Time
