@@ -24,10 +24,10 @@ The first 8 are planning and the last 3 are actions.
 
 The Iron Triangle:
 ```mermaid
-graph LR
-A((Quality))--> B((Cost))
-B --> C((Time))
-C --> A((Quality))
+graph LR;
+A((Quality))--> B((Cost));
+B --> C((Time));
+C --> A((Quality));
 ```
 1. Quality
 2. Cost
