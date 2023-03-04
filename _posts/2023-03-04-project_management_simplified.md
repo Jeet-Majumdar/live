@@ -24,7 +24,7 @@ The first 8 are planning and the last 3 are actions.
 
 **The Iron Triangle:**
 
-![iron_triangle]({{site.baseurl}}/assets/img/project_management_iron_triangle.jpg)
+![iron_triangle]({{site.baseurl}}/assets/img/2023-03-04-project_management_iron_triangle.jpg)
 
 1. Quality
 2. Cost
