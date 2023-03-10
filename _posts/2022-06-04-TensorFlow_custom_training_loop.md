@@ -73,4 +73,4 @@ categories: [Tech]
 
 ### Ref:
 
-1. *From https://www.tensorflow.org/guide/keras/writing_a_training_loop_from_scratch :*
+1. From [Tensorflow Doc](https://www.tensorflow.org/guide/keras/writing_a_training_loop_from_scratch)
