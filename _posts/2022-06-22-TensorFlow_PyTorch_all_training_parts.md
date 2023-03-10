@@ -469,7 +469,7 @@ for epoch in range(epochs):
 Ingredients:
 
 - Loss Function: `loss_fn = nn.CrossEntropyLoss()`
-- Optimizer : `optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)`
+- Optimizer : `optimizer = torch.optim.SGD( model.parameters(), lr=learning_rate)`
 
 Each epoch consists of two main parts:
 
