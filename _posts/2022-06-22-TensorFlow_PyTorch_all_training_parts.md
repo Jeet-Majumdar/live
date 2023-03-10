@@ -574,6 +574,6 @@ model = torch.load('model.pth')
 
 
 
-- References:
-  1. https://www.tensorflow.org/api_docs/python/tf/all_symbols
-  2. https://pytorch.org/docs/1.11/
+References:
+ 1. [Tensorflow Doc](https://www.tensorflow.org/api_docs/python/tf/all_symbols)
+ 2. [PyTorch Doc](https://pytorch.org/docs/1.11/)
