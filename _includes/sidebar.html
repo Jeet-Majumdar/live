@@ -28,10 +28,10 @@
         {% endfor %}
       {% endcomment %}
 
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/categories">Categories</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/projects">Projects</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/about">About</a>
-      <a class="sidebar-nav-item" href="{{ site.baseurl }}/disclaimer">Legal Disclaimer</a>
+      <a class="sidebar-nav-item{% if page.url == {{ site.baseurl }}/categories %} active{% endif %}" href="{{ site.baseurl }}/categories">Categories</a>
+      <a class="sidebar-nav-item{% if page.url == {{ site.baseurl }}/projects %} active{% endif %}" href="{{ site.baseurl }}/projects">Projects</a>
+      <a class="sidebar-nav-item{% if page.url == {{ site.baseurl }}/about %} active{% endif %}" href="{{ site.baseurl }}/about">About</a>
+      <a class="sidebar-nav-item{% if page.url == {{ site.baseurl }}/disclaimer %} active{% endif %}" href="{{ site.baseurl }}/disclaimer">Legal Disclaimer</a>
 
       <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>  <-->
       <!-- <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>  <-->
