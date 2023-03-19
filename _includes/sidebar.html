@@ -8,7 +8,9 @@
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
-
+      <p class="lead">
+      	<img style="float: middle;" src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjeet-majumdar.github.io%2Flive%2F%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/>
+      </p>
     <nav class="sidebar-nav">
       {% comment %}
       	<a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
@@ -29,7 +31,6 @@
           {% endif %}
         {% endfor %}
       {% endcomment %}
-      <a class="sidebar-nav-item"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjeet-majumdar.github.io%2Flive%2F%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> 
 
       <a class="sidebar-nav-item{% if page.url == '/' %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
       <a class="sidebar-nav-item{% if page.url == '/categories/' %} active{% endif %}" href="{{ site.baseurl }}/categories">Categories</a>
