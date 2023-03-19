@@ -2,9 +2,6 @@
 layout: page
 title: Legal Disclaimer
 ---
-<p align="center">
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjeet-majumdar.github.io%2Flive%2Fdisclaimer%2F&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-</p>
 Legal Disclaimer
 This site exists for informational purposes only. All content on this site is my understanding and my personal opinion. Absolutely nothing on this site, or in any material written by me which has been linked on this site, should be construed as advice of any form, even if this is not explicitly noted within the post.
 
