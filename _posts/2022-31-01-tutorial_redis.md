@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Redis: A Tutorial
+title: Redis - A Tutorial
 categories: [Tech]
 ---
 

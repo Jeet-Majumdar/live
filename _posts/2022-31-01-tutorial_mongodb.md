@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB: A Tutorial
+title: MongoDB - A Tutorial
 categories: [Tech]
 ---
 
