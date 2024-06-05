@@ -139,6 +139,13 @@ find [where to start searching from]
 - `find ./jeet -perm 777` :  Search for file with entered permissions 777
 - `find ./jeet -type f -name "*.txt" -exec grep 'Geek'  {} \;` : This command print lines of files ending with *.txt* inside the directory *.jeet* which have ‘Geek’ in them and ‘-type f’ specifies the input type is a file.
 
+## nohup
 
+`nohup` helps to run scripts in the background and separate the job from the terminal session.
+
+- `chmod +x your_script.sh` to make your script executable
+- `nohup ./your_script.sh > /dev/null 2>&1 &` runs the script. The `> /dev/null 2>&1` redirects both standard output and standard error to /dev/null
+- `ps aux | grep your_script.sh` to get the task id.
+- `kill <PID>` or `pkill -f your_script.sh` to kill the job.
 
 A cheatsheet of bash commands can be found [here](https://devhints.io/bash). This is a pretty good resource of many other cheetsheets so do check out the site!
