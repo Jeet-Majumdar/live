@@ -149,3 +149,21 @@ find [where to start searching from]
 - `kill <PID>` or `pkill -f your_script.sh` to kill the job.
 
 A cheatsheet of bash commands can be found [here](https://devhints.io/bash). This is a pretty good resource of many other cheetsheets so do check out the site!
+
+-------------------------
+
+# Tricks
+
+## Show Only the n-th Line After the Match
+
+We can use `-An` and `-Bn` options to get `n` lines before and after the matched context together with the matched line respectively.
+However, if we want to get only the n-th line after the matched context, we need to do:
+```bash
+grep 'Temp' --no-group-separator -A1 report.txt | grep -v 'Temp'
+```
+Here, the matching string is *Temp*. and we are just interested to get only the next line following the matched line.
+Similarly, if we wanted to get 1 line before the matched line, we would have used `-B1`.
+
+The last pipeline again to grep with the option `-v` is to just eliminate the matched line from the final selection of lines from the first grep command. Essentially `-v` selects non-matching lines.
+
+
