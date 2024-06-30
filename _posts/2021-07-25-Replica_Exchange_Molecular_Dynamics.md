@@ -22,8 +22,7 @@ The mean energy of a system is governed by the temperature, and if the system fa
 
 So in REMD (also called parallel tempering), we simulate two or more systems simultaneously at different temperatures. At certain intervals of time, we swap the systems following swap acceptance ratio and again proceed to carry out the simulation. The time interval between two swaps should be chosen such that the system equilibriates at a temperature properly, and the overall task is carried out till one has done enough sampling. 
 
-![img](http://www.strodel.info/index_files/lecture/html/media/REMD.png)
-*Source: http://www.strodel.info/index_files/lecture/html/enhsampling_remd.html*
+![img](https://www.mdpi.com/biomolecules/biomolecules-11-01416/article_deploy/html/images/biomolecules-11-01416-g002-550.jpg)
 
 With more swaps from higher temperature to a lower temperature, the possibility of sampling the system at or near the rare event increases. This apparently strange technique of sampling is justified because the replicas are exchanged following metropolis algorithms.  
 
@@ -33,9 +32,7 @@ Any scheme that satisfies detailed balance forms a Markov chain whose stationary
 
 Thus we are safe as long as we do the swapping abiding the relation:
 
-$$
-P(\beta, U(x))P((\beta, U(x)) ->  (\beta', U(x))) = P(\beta', U(x))P((\beta', U(x)) ->  (\beta, U(x)))
-$$
+$ P(\beta, U(x))P((\beta, U(x))$ -> $(\beta', U(x))) = P(\beta', U(x))P((\beta', U(x)) ->  (\beta, U(x)))$
 
 But in MD, the system's $U(x)$ will vary with temperature. Therefore, we have to choose a gradient of temperature such that the spacing between the temperatures provide overlapping distribution of U(x). Then swaps are made between the structures of nearest temperature following the Boltzmann acceptance ratio. 
 
