@@ -24,8 +24,7 @@ The time-dependent density correlation function F(k, t) is called intermediate s
 Have a look at the typical plot of intermediate scattering function with time of a liquid plotted for $k=2\pi$ (*i.e* $d=1$):
 
 ![img](https://ars.els-cdn.com/content/image/1-s2.0-S0370157314004062-gr3_lrg.jpg)
-
-*Ref:* *https://www.sciencedirect.com/science/article/pii/S0370157314004062#f000015*
+[Ref](https://www.sciencedirect.com/science/article/pii/S0370157314004062#f000015)
 
 As the system is cooled, the overall relaxation time increases very rapidly and this happens in steps. At short time, the particles undergo ballistic motion. Here they take short linear moves without colliding with neighbours. Occasionally, these particles may take a random path within the "cage" of its neighbours, which is called by $\beta$ relaxation. On an even longer time-scale, particles may move out of this cage which is associated to another kind of relaxation process called $\alpha$ relaxation. 
 
