@@ -15,7 +15,7 @@ However, whenever this relation do not hold true, arbitrage is possible which gi
 
 Let me first show the use of put-call parity into action without going into the technicalities. Concretely, I will try to show how to identify arbitrage opportunity.
 
-The equation we will use is `Call (c) + Present Value of Strike (Ke^{-rT}) = Put (p) + Spot (S)`
+The equation we will use is $Call (c) + Present Value of Strike (Ke^{-rT}) = Put (p) + Spot (S)$
 
 Now lets say, an underlying has a spot price of Rs 31, and for a stike of Rs. 30, the call option is trading at Rs. 3, the put option is trading at Rs. Rs. 2.25. The option has 3 months to expiry, and the market risk free rate is 10%
 Therefore, left hand side of put-call parity will be $3 + 30e^{-0.1 \times \frac{3}{12}} = 32.26$. And the right hand side will be $2.25 + 31 = 33.25$.
@@ -45,7 +45,7 @@ Now lets revisit the situation in the *First case* when both call and put option
 $(c - p) + K$. 
 The is because we paid money to buy the call option, pocketed money of put, and we also then have to buy the shares at $K$ per unit at expiry (although the shares actually cost more than $K$ i.e. profit). This is right now the net price for us of the synthetic forward ($S_0$).
 
-In the *Second case*, this will be $(c - p) + K$. Yes, the same. Because here, the exercise price `c - p` will also be there, and we will be obligated to buy the shares at $K$ unit each (although the shares actually cost less than $K$ i.e. loss)
+In the *Second case*, this will be $(c - p) + K$. Yes, the same. Because here, the exercise price `(c - p)` will also be there, and we will be obligated to buy the shares at $K$ unit each (although the shares actually cost less than $K$ i.e. loss)
 
 Therefore, the price of the synthetic forward effectively becomes $(c - p) + K$. We created this systhetic forward by buying call and selling put together.
 
