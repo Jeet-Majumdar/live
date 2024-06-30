@@ -15,7 +15,8 @@ However, whenever this relation do not hold true, arbitrage is possible which gi
 
 Let me first show the use of put-call parity into action without going into the technicalities. Concretely, I will try to show how to identify arbitrage opportunity.
 
-The equation we will use is $Call (c) + Present Value of Strike (Ke^{-rT}) = Put (p) + Spot (S)$
+The equation we will use is:
+Call (c) + Present Value of Strike (Ke$^{-rT}$) = Put (p) + Spot (S)
 
 Now lets say, an underlying has a spot price of Rs 31, and for a stike of Rs. 30, the call option is trading at Rs. 3, the put option is trading at Rs. Rs. 2.25. The option has 3 months to expiry, and the market risk free rate is 10%
 Therefore, left hand side of put-call parity will be $3 + 30e^{-0.1 \times \frac{3}{12}} = 32.26$. And the right hand side will be $2.25 + 31 = 33.25$.
