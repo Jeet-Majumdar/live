@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Put-Call Parity and Finding Arbitrage in the NSE Option Chain
+title: Put-Call Parity and Finding Arbitrage Oppurtinity
 categories: [Fin]
 ---
 
