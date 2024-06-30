@@ -32,7 +32,7 @@ Any scheme that satisfies detailed balance forms a Markov chain whose stationary
 
 Thus we are safe as long as we do the swapping abiding the relation:
 
-$ P(\beta, U(x))P((\beta, U(x))$ -> $(\beta', U(x))) = P(\beta', U(x))P((\beta', U(x)) ->  (\beta, U(x)))$
+$ P(\beta, U(x))P((\beta, U(x))$ -> $(\beta', U(x))) = P(\beta', U(x))P((\beta', U(x))$ ->  $(\beta, U(x)))$
 
 But in MD, the system's $U(x)$ will vary with temperature. Therefore, we have to choose a gradient of temperature such that the spacing between the temperatures provide overlapping distribution of U(x). Then swaps are made between the structures of nearest temperature following the Boltzmann acceptance ratio. 
 
