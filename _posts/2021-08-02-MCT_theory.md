@@ -15,8 +15,7 @@ For the impatient ones: the MCT predicts the dynamic, given time-independent inf
 Let's have some realisation through numbers and figures. A normal liquid has a viscosity of about 10<sup>-3</sup> Pa.s, whereas the viscosity of a glassy solid is about 10<sup>12</sup> Pa.s. The structure of the material in different phases is given in the following figure:
 
 ![structure_phases]({{site.baseurl}}/assets/img/2021-08-02-MCT_theory_img_1.jpg)
-
-*Ref:* *https://mini.physics.sunysb.edu/~marivi/TEACHING-OLD/PHY313/doku.php?id=lectures:8*
+[Ref](https://mini.physics.sunysb.edu/~marivi/TEACHING-OLD/PHY313/doku.php?id=lectures:8)
 
 Notice how the liquid and glassy state look so similar in their ordering.
 
@@ -190,8 +189,7 @@ Equation 12 can be solved with the quadratic form of $K_{MCT} = ax^2(t)$ in an i
 ![Schematic_MCT_solution](https://d3i71xaburhd42.cloudfront.net/a4a48853a8b3c837ab5188e101820392223d1d14/9-Figure6-1.png)
 
 
-
-*Ref:* *https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full*
+[Ref](https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full)
 
 As "a" increases, x(t) seizes to drop any sooner. And beyond the critical value of $a=4$, it stays constant for all practical purposes.
 
@@ -233,7 +231,7 @@ $E_a$ is the activation energy which is a measure of the fragility [the degree t
 
 ![img](https://www.frontiersin.org/files/Articles/403911/fphy-06-00097-HTML/image_m/fphy-06-00097-g007.jpg)
 
-*Ref:* https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full
+[Ref](https://www.frontiersin.org/articles/10.3389/fphy.2018.00097/full)
 
 The figure above shows the relevant regions along with the predictions of MCT.
 
