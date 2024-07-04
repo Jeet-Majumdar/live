@@ -55,7 +55,7 @@ We will estimate till 5 years, and then we get as per the risk-free rate of retu
 Let that risk free rate of return be $2.55\%$. We use T-bonds because it can span for our long-term projection of 5 years.
 
 $$
-1756.54 = \frac{86.96}{(1+r)} + \frac{91.82}{(1+r)^2} +  \frac{96.95}{(1+r)^3} +  \frac{102.38}{(1+r)^4} \\+  \frac{108.10}{(1+r)^5} +    \frac{110.86}{(r - 0.0255)(1+r)^5}
+1756.54 = \frac{86.96}{(1+r)} + \frac{91.82}{(1+r)^2} \\ +  \frac{96.95}{(1+r)^3} +  \frac{102.38}{(1+r)^4} + \frac{108.10}{(1+r)^5} \\ + \frac{110.86}{(r - 0.0255)(1+r)^5}
 $$
 
 Solving this manually is mathematically challenging, so we can use some tool like SOLVER in MS-EXCEL, or python.
