@@ -69,7 +69,7 @@ Implied equity risk premium = $5.49\%$
 
 This is the value we can use in CAPM model, as well as in the calculation of Weighted Average Cost of Capital; when a corporation raises money in the form of Equity.
 
-** Expected Return Calculation for NIFTY 50**
+**Expected Return Calculation for NIFTY 50**
 I found an excellent example of calculation for the expected return calculation for NIFTY 50 index, where they used the exact same blueprint described in the slides of Mr. Damodaran and also discussed here.
 Here is the [link](https://www.rvoicmai.in/e-book/Nifty-50-Valuation-Report-myakjj0lEsfIossk).
 
