@@ -49,8 +49,8 @@ Therefore, the total earning to the investor in TTM was $33.33+49.02=82.35$
 
 Now we will use the analyst's expected rate of return. Let that be $5.59\%$
 
-Then, 1st year from now, we can expect to receive a payment of $82.35\*1.0559=86.96$. 
-In 2nd year this will be $86.96*1.0559=91.82$ and so on.
+Then, 1st year from now, we can expect to receive a payment of $82.35 \times 1.0559=86.96$. 
+In 2nd year this will be $86.96 \times 1.0559=91.82$ and so on.
 We will estimate till 5 years, and then we get as per the risk-free rate of return. 
 Let that risk free rate of return be $2.55\%$. We use T-bonds because it can span for our long-term projection of 5 years.
 
