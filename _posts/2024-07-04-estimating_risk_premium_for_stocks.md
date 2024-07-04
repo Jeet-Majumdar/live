@@ -77,3 +77,4 @@ Here is the [link](https://www.rvoicmai.in/e-book/Nifty-50-Valuation-Report-myak
 1. [Damodaran Slide](https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr23/session7slides.pdf)
 2. [Damodaran Video](https://www.youtube.com/watch?v=J1m0PKrQrH4)
 3. [E-library: Valuation books for India](https://www.rvoicmai.in/e-library) 
+4. [Historical Valuation of Indian Equity Market: An Excellent Site](http://www.market-risk-premia.com/in.html)
