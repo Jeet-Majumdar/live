@@ -171,10 +171,10 @@ So, although there is a great volume of proxy studies that hint towards the theo
 Contents of this article was adopted from many different sources, and the references are given bellow:
 
 **References**
-1. [J. Phys. Chem. Lett._  2015, 6, 11, 2009–2014 	Publication Date:May 13, 2015](https://doi.org/10.1021/acs.jpclett.5b00827 "DOI URL")
-2. [Paola Gallo, Supercooled water reveals its secrets._Science 358,1543-1544(2017)](https://doi.org/10.1126/science.aar3575)
+1. [Wang, Zhe, et al. "Liquid–liquid phase transition and its phase diagram in deeply-cooled heavy water confined in a nanoporous silica matrix." The journal of physical chemistry letters 6.11 (2015): 2009-2014.](https://doi.org/10.1021/acs.jpclett.5b00827)
+2. [Paola Gallo, Supercooled water reveals its secrets. Science 358,1543-1544(2017)](https://doi.org/10.1126/science.aar3575)
 3. [Nilsson A. Origin of the anomalous properties in supercooled water based on experimental probing inside “no-man's land”. Journal of Non-Crystalline Solids: X. 2022 Jun 1;14:100095.](https://www.sciencedirect.com/science/article/pii/S2590159122000152)
-4. [Chem. Rev._  2016, 116, 13, 7608–7625](https://doi.org/10.1021/acs.chemrev.5b00609 "DOI URL")
+4. [Cerveny, Silvina, et al. "Confined water as model of supercooled water." Chemical reviews 116.13 (2016): 7608-7625.](https://doi.org/10.1021/acs.chemrev.5b00609)
 5. [Mochizuki, Kenji, and Kenichiro Koga. "Solid− liquid critical behavior of water in nanopores." Proceedings of the National Academy of Sciences 112.27 (2015): 8221-8226.](https://www.pnas.org/doi/full/10.1073/pnas.1422829112)
 6. [Mallamace, Francesco. "The liquid water polymorphism." Proceedings of the National Academy of Sciences 106.36 (2009): 15097-15098.](https://www.pnas.org/doi/full/10.1073/pnas.0908198106)
 7. [Wang, Dianyu, Ye Tian, and Lei Jiang. "Abnormal Properties of Low‐Dimensional Confined Water." Small 17.31 (2021): 2100788.](https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202100788)
