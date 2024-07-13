@@ -177,3 +177,4 @@ Contents of this article was adopted from many different sources, and the refere
 4. [Chem. Rev._  2016, 116, 13, 7608–7625](https://doi.org/10.1021/acs.chemrev.5b00609 "DOI URL")
 5. [Mochizuki, Kenji, and Kenichiro Koga. "Solid− liquid critical behavior of water in nanopores." Proceedings of the National Academy of Sciences 112.27 (2015): 8221-8226.](https://www.pnas.org/doi/full/10.1073/pnas.1422829112)
 6. [Mallamace, Francesco. "The liquid water polymorphism." Proceedings of the National Academy of Sciences 106.36 (2009): 15097-15098.](https://www.pnas.org/doi/full/10.1073/pnas.0908198106)
+7. [Wang, Dianyu, Ye Tian, and Lei Jiang. "Abnormal Properties of Low‐Dimensional Confined Water." Small 17.31 (2021): 2100788.](https://onlinelibrary.wiley.com/doi/full/10.1002/smll.202100788)
