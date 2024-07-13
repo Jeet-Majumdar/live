@@ -23,4 +23,6 @@ The best way to reach me is by email. You can send me a message in my [mail](mai
 
 LinkedIn: [Click here!](https://www.linkedin.com/in/jeet-majumdar-india/)
 
+<div style="width: 40%">
 <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=be6lUqEvkPQRGBKAyi8OsFA4yguYBrkSuTuxoUaWkUQ"></script>
+</div>
