@@ -171,7 +171,7 @@ So, although there is a great volume of proxy studies that hint towards the theo
 Contents of this article was adopted from many different sources, and the references are given bellow:
 
 **References**
-1. _[J. Phys. Chem. Lett._  2015, 6, 11, 2009–2014 	Publication Date:May 13, 2015](https://doi.org/10.1021/acs.jpclett.5b00827 "DOI URL")
+1. [J. Phys. Chem. Lett._  2015, 6, 11, 2009–2014 	Publication Date:May 13, 2015](https://doi.org/10.1021/acs.jpclett.5b00827 "DOI URL")
 2. [Paola Gallo, Supercooled water reveals its secrets._Science 358,1543-1544(2017)](https://doi.org/10.1126/science.aar3575)
 3. [Nilsson A. Origin of the anomalous properties in supercooled water based on experimental probing inside “no-man's land”. Journal of Non-Crystalline Solids: X. 2022 Jun 1;14:100095.](https://www.sciencedirect.com/science/article/pii/S2590159122000152)
 4. [Chem. Rev._  2016, 116, 13, 7608–7625](https://doi.org/10.1021/acs.chemrev.5b00609 "DOI URL")
