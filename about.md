@@ -24,7 +24,7 @@ The best way to reach me is by email. You can send me a message in my [mail](mai
 
 You can also find me on [LinkedIn](https://www.linkedin.com/in/jeet-majumdar-india/).
 
-**Other Places**
+**Other Places:**
 <span>
     <a href="mailto:mail2majumdar@gmail.com" title="email">
       <i class="fa-solid fa-envelope"></i>
