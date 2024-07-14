@@ -12,6 +12,7 @@ tagline:          'Keep it coded'
 description:      'A place for the noobs!'
 url:              https://jeet-majumdar.github.io/live//
 baseurl:          '/live//' 
+categories:       ['Research', 'Fin', 'Tech']
 
 author:
   name:           'Jeet'
