@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: Project Management
-categories: [Tech, Research]
+categories: [Research, Tech]
 ---
 
 
