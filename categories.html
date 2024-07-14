@@ -5,8 +5,7 @@ title: Categories
 ---
 <div id="archives">
 {% for category in site.categories %}
-{{ site.categories }}
-  <!-- <div class="archive-group">
+  <div class="archive-group">
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <div id="#{{ category_name | slugize }}"></div>
     <p></p>
@@ -18,7 +17,7 @@ title: Categories
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
     {% endfor %}
-  </div> -->
+  </div>
   </br>
 {% endfor %}
 </div>
