@@ -36,6 +36,7 @@ The profit diagram of a call and put option is given as follows:
 
 The diagram shows that the net profit/loss line upon buying a call option and selling a put option of the same asset, same expiry, and same strike price. We see that the combined effect of call and put gives rise to a similar situation as in the case of a forward contract. We call this synthetic forward. The strike price of the forward is the same as that of the options. Now, what is this synthetic long forward at any given point in time in future? 
 To answer this through the lens of options, we will first understand the situation individually in the two possible cases: when the underlying asset is trading above the strike price, and when it is trading below the strike price.
+
 *First case:* Lets say at time T in future, the price of the underlying is trading *above* the current strike price. 
 In this case (orange line), the payoff will be, $max(S(T) - K, 0) - c$. Why? Because we will only gain as much as the stock price moved above the stike price, else we wont exercise the call option. But we will also have to deduct the primium paid in purchasing the call option. Hence the deduction.
 
