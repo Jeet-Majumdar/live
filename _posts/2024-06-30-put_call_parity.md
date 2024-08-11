@@ -55,7 +55,7 @@ Now, there is only one problem over here. The strike price ($K$) we used, is wha
 And in option trading, eveything is settled in cash on a M2M basis, unless we take the delivery.
 Hence, to calculate the effective strike price for us of the synthetic forward contract on the present date, we need to discount $K$ with any available risk-free rate of interest (r).
 This gives us the strike price ($S_0$) of the synthetic forward contract as $(c - p) + Ke^{-rT}$. If this matches the currently traded value of the underlying (i.e the spot price), there is no scope of arbitrage by hedging on the risk-free rate of interest. It gives us the put-call parity relation.
-$S_0 = c - p + Ke{-rT} = S$
+$S_0 = c - p + Ke^{-rT} = S$
 
 If $S_0$ \> current spot price ($S$) , it means the stock is undervalued, and if $S_0$ \< current spot price ($S$), it means the stock is overvalued.
 
