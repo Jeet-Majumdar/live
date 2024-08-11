@@ -48,7 +48,7 @@ Now lets revisit the situation in the *First case* when both call and put option
 $(c - p) + K$. 
 The is because we paid money to buy the call option, pocketed money of put, and we also then have to buy the shares at $K$ per unit at expiry (although the shares actually cost more than $K$ i.e. profit). This is right now the net price for us of the synthetic forward ($S_0$).
 
-In the *Second case*, this will be $(c - p) + K$. Yes, the same. Because here, the exercise price `(c - p)` will also be there, and we will be obligated to buy the shares at $K$ unit each (although the shares actually cost less than $K$ i.e. loss)
+In the *Second case*, this will be $(c - p) + K$. Yes, the same. Because here, the exercise price $(c - p)$ will also be there, and we will be obligated to buy the shares at $K$ unit each (although the shares actually cost less than $K$ i.e. loss)
 
 Therefore, the price of the synthetic forward effectively becomes $(c - p) + K$. We created this systhetic forward by buying call and selling put together.
 
@@ -62,7 +62,7 @@ If $S_0$ \> current spot price ($S$) , it means the stock is undervalued, and if
 
 How to use the arbitrage opportunity to hedge:
 1. Rewriting the derived put-call parity equation as stated at the very beginning: $c + Ke^{-rT} = p + S$.
-    >For a dividend paying stock, the put-call parity equation becomes:
+    >For a dividend paying stock with rate $d$, the put-call parity equation becomes:
     >$c + Ke^{-rT} = p + Se^{-r_{d}T}$
 2. If the right hand side is more than the left hand side, we will sell the more and buy the less one immediately.
 3. At this point, I stumbled at first on the way to buy the exponential part on the left side. The short answer is, buy a bond or FD of the amount $Ke^{-rT}$ where the rate of risk-free interest is $r$. 
