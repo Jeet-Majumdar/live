@@ -62,7 +62,7 @@ If $S_0$ \> current spot price ($S$) , it means the stock is undervalued, and if
 
 How to use the arbitrage opportunity to hedge:
 1. Rewriting the derived put-call parity equation as stated at the very beginning: $c + Ke^{-rT} = p + S$.
-    >For a dividend paying stock with rate $d$, the put-call parity equation becomes:
+    >For a dividend paying stock with rate $r_d$, the put-call parity equation becomes:
     >$c + Ke^{-rT} = p + Se^{-r_{d}T}$
 2. If the right hand side is more than the left hand side, we will sell the more and buy the less one immediately.
 3. At this point, I stumbled at first on the way to buy the exponential part on the left side. The short answer is, buy a bond or FD of the amount $Ke^{-rT}$ where the rate of risk-free interest is $r$. 
