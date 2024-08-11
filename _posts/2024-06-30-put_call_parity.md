@@ -9,6 +9,7 @@ Put-call parity of an option is the relationship between the price of a call opt
 2. Both the call and put should be of the same underlying asset
 3. Both the call and put should be having the same Strike price
 4. Both the call and put should be having the same expiry date.
+5. The stock do not pay any dividend.
 
 Pricing of options maintaining the put-call parity relationship will give a fair pricing model which do not provide any opportunity of market arbitrage.
 However, whenever this relation do not hold true, arbitrage is possible which gives risk free return on investment in the option.
@@ -61,6 +62,8 @@ If $S_0$ \> current spot price ($S$) , it means the stock is undervalued, and if
 
 How to use the arbitrage opportunity to hedge:
 1. Rewriting the derived put-call parity equation as stated at the very beginning: $c + Ke^{-rT} = p + S$.
+    >For a dividend paying stock, the put-call parity equation becomes:
+    >$c + Ke^{-rT} = p + Se^{-r_{d}T}$
 2. If the right hand side is more than the left hand side, we will sell the more and buy the less one immediately.
 3. At this point, I stumbled at first on the way to buy the exponential part on the left side. The short answer is, buy a bond or FD of the amount $Ke^{-rT}$ where the rate of risk-free interest is $r$. 
 
