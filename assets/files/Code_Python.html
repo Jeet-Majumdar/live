@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Python</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="list">List</h2>
+<h3 id="python-list-functions">Python List Functions</h3>
+<h3 id="basic-operations">Basic Operations</h3>
+<ul>
+<li><strong><code>append(item)</code>:</strong> Adds an element to the end of the list.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the list.</li>
+<li><strong><code>copy()</code>:</strong> Returns a shallow copy of the list.</li>
+<li><strong><code>count(element)</code>:</strong> Returns the number of occurrences of an element in the list.</li>
+<li><strong><code>extend(iterable)</code>:</strong> Appends the elements of another iterable to the end of the list.</li>
+<li><strong><code>index(element, start=0, end=None)</code>:</strong> Returns the index of the first occurrence of an element in the list.</li>
+<li><strong><code>insert(index, element)</code>:</strong> Inserts an element at a specified position.</li>
+<li><strong><code>pop(index=None)</code>:</strong> Removes and returns the element at a specified position. If no index is specified, removes the last element.</li>
+<li><strong><code>remove(element)</code>:</strong> Removes the first occurrence of an element in the list.</li>
+<li><strong><code>reverse()</code>:</strong> Reverses the order of the elements in the list.</li>
+<li><strong><code>sort(key=None, reverse=False)</code>:</strong> Sorts the elements in the list.</li>
+</ul>
+<h3 id="slicing">Slicing</h3>
+<ul>
+<li><strong><code>list[start:stop:step]</code>:</strong> Returns a new list containing a slice of the original list.</li>
+</ul>
+<h2 id="dictionary-map">Dictionary (Map)</h2>
+<h3 id="python-dictionary-functions">Python Dictionary Functions</h3>
+<h3 id="basic-operations-1">Basic Operations</h3>
+<ul>
+<li><strong><code>clear()</code>:</strong> Removes all items from the dictionary.</li>
+<li><strong><code>copy()</code>:</strong> Returns a shallow copy of the dictionary.</li>
+<li><strong><code>get()</code>:</strong> Returns the value for a key, or a default value if the key is not found.</li>
+<li><strong><code>items()</code>:</strong> Returns a list of tuples, each containing a key-value pair.</li>
+<li><strong><code>keys()</code>:</strong> Returns a list of all keys in the dictionary.</li>
+<li><strong><code>values()</code>:</strong> Returns a list of all values in the dictionary.</li>
+<li><strong><code>pop()</code>:</strong> Removes a specified item and returns its value.</li>
+<li><strong><code>popitem()</code>:</strong> Removes and returns an arbitrary item as a tuple.</li>
+<li><strong><code>setdefault()</code>:</strong> Inserts a key with a specified default value if it doesn’t exist.</li>
+<li><strong><code>update()</code>:</strong> Updates the dictionary with the contents of another dictionary or iterable.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-python"><code class="prism  language-python">my_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'apple'</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">'banana'</span><span class="token punctuation">:</span> <span class="token number">20</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Access elements</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_dict<span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Modify elements</span>
+my_dict<span class="token punctuation">[</span><span class="token string">'orange'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">30</span>
+
+<span class="token comment"># Add elements</span>
+my_dict<span class="token punctuation">[</span><span class="token string">'grape'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">40</span>
+
+<span class="token comment"># Remove elements</span>
+my_dict<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'banana'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Iterate over items</span>
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> my_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+</code></pre>
+<h2 id="deque">Deque</h2>
+<h3 id="python-deque-double-ended-queue-functions">Python Deque (Double-Ended Queue) Functions</h3>
+<h3 id="basic-operations-2">Basic Operations</h3>
+<ul>
+<li><strong><code>append(item)</code>:</strong> Adds an element to the right end (rightmost element).</li>
+<li><strong><code>appendleft(item)</code>:</strong> Adds an element to the left end (leftmost element).</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the deque.</li>
+<li><strong><code>count(element)</code>:</strong> Returns the number of occurrences of an element in the deque.</li>
+<li><strong><code>extend(iterable)</code>:</strong> Adds elements from another iterable to the right end.</li>
+<li><strong><code>extendleft(iterable)</code>:</strong> Adds elements from another iterable to the left end.</li>
+<li><strong><code>pop()</code>:</strong> Removes and returns the rightmost element.</li>
+<li><strong><code>popleft()</code>:</strong> Removes and returns the leftmost element.</li>
+<li><strong><code>rotate(n=1)</code>:</strong> Rotates the elements in the deque by n positions.</li>
+</ul>
+<h3 id="other-methods">Other Methods</h3>
+<ul>
+<li><strong><code>copy()</code>:</strong> Returns a shallow copy of the deque.</li>
+<li><strong><code>index(element, start=0, stop=None)</code>:</strong> Returns the index of the first occurrence of an element.</li>
+<li><strong><code>insert(index, element)</code>:</strong> Inserts an element at a specified position.</li>
+<li><strong><code>remove(value)</code>:</strong> Removes the first occurrence of a value.</li>
+<li><strong><code>reverse()</code>:</strong> Reverses the order of the elements.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+
+queue <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Add elements to the right end</span>
+queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Add elements to the left end</span>
+queue<span class="token punctuation">.</span>appendleft<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Remove and print elements</span>
+<span class="token keyword">while</span> queue<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>queue<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="heap">Heap</h2>
+<h3 id="python-heap-functions">Python Heap Functions</h3>
+<p><strong>Heap:</strong> A heap is a specialized tree-based data structure that satisfies the heap property: for every node, the value of the node is greater than or equal to (in a max heap) or less than or equal to (in a min heap) the values of its children.</p>
+<p>Python’s standard library provides the <code>heapq</code> module for working with heaps.</p>
+<h3 id="basic-operations-3">Basic Operations</h3>
+<ul>
+<li><strong><code>heapq.heapify(iterable)</code>:</strong> Converts an iterable into a heap in-place.</li>
+<li><strong><code>heapq.heappush(heap, item)</code>:</strong> Pushes an item onto the heap.</li>
+<li><strong><code>heapq.heappop(heap)</code>:</strong> Pops the smallest item from the heap.</li>
+<li><strong><code>heapq.nlargest(n, iterable, key=None)</code>:</strong> Returns the n largest elements from the iterable.</li>
+<li><strong><code>heapq.nsmallest(n, iterable, key=None)</code>:</strong> Returns the n smallest elements from the iterable.</li>
+</ul>
+<h3 id="additional-functions">Additional Functions</h3>
+<ul>
+<li><strong><code>heapq.merge(*iterables, key=None)</code>:</strong> Merges multiple sorted iterables into a single sorted iterable.</li>
+<li><strong><code>heapq.heapreplace(heap, item)</code>:</strong> Pops the smallest item from the heap and pushes the new item onto the heap.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> heapq
+
+<span class="token comment"># Create a max heap</span>
+max_heap <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+heapq<span class="token punctuation">.</span>heapify<span class="token punctuation">(</span>max_heap<span class="token punctuation">)</span>
+
+<span class="token comment"># Push an item onto the heap</span>
+heapq<span class="token punctuation">.</span>heappush<span class="token punctuation">(</span>max_heap<span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Pop the smallest item from the heap</span>
+smallest <span class="token operator">=</span> heapq<span class="token punctuation">.</span>heappop<span class="token punctuation">(</span>max_heap<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>max_heap<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>smallest<span class="token punctuation">)</span>
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> heapq
+
+h <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+heapq<span class="token punctuation">.</span>heappush<span class="token punctuation">(</span>h<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">'write code'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+heapq<span class="token punctuation">.</span>heappush<span class="token punctuation">(</span>h<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'release product'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+heapq<span class="token punctuation">.</span>heappush<span class="token punctuation">(</span>h<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'write spec'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+heapq<span class="token punctuation">.</span>heappush<span class="token punctuation">(</span>h<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'create tests'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+heapq<span class="token punctuation">.</span>heappop<span class="token punctuation">(</span>h<span class="token punctuation">)</span>
+</code></pre>
+</div>
+</body>
+
+</html>

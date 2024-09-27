@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Java</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="array">Array</h2>
+<h3 id="creating-arrays">Creating Arrays</h3>
+<ul>
+<li><strong><code>new Type[size]</code>:</strong> Creates a new array of the specified type and size.</li>
+<li><strong><code>Type[] arrayName = {element1, element2, ...}</code>:</strong> Creates an array with initial values.</li>
+</ul>
+<h3 id="accessing-elements">Accessing Elements</h3>
+<ul>
+<li><strong><code>arrayName[index]</code>:</strong> Accesses the element at the specified index.</li>
+</ul>
+<h3 id="modifying-elements">Modifying Elements</h3>
+<ul>
+<li><strong><code>arrayName[index] = newValue</code>:</strong> Modifies the element at the specified index.</li>
+</ul>
+<h3 id="array-length">Array Length</h3>
+<ul>
+<li><strong><code>arrayName.length</code>:</strong> Returns the length of the array.</li>
+</ul>
+<h3 id="copying-arrays">Copying Arrays</h3>
+<ul>
+<li><strong><code>System.arraycopy(src, srcPos, dest, destPos, length)</code>:</strong> Copies elements from one array to another.</li>
+<li><strong><code>Arrays.copyOf(array, newLength)</code>:</strong> Returns a copy of the array with a new length.</li>
+<li><strong><code>Arrays.copyOfRange(array, fromIndex, toIndex)</code>:</strong> Returns a copy of a subarray.</li>
+</ul>
+<h3 id="sorting-arrays">Sorting Arrays</h3>
+<ul>
+<li><strong><code>Arrays.sort(array)</code>:</strong> Sorts the elements in the array in ascending order.</li>
+<li><strong><code>Arrays.sort(array, Comparator&lt;T&gt; comparator)</code>:</strong> Sorts the elements in the array using a custom comparator.</li>
+</ul>
+<h3 id="searching-arrays">Searching Arrays</h3>
+<ul>
+<li><strong><code>Arrays.binarySearch(array, key)</code>:</strong> Searches for a key in a sorted array using binary search.</li>
+<li><strong><code>Arrays.binarySearch(array, fromIndex, toIndex, key)</code>:</strong> Searches for a key in a sorted subarray using binary search.</li>
+</ul>
+<h3 id="filling-arrays">Filling Arrays</h3>
+<ul>
+<li><strong><code>Arrays.fill(array, value)</code>:</strong> Fills the array with a specified value.</li>
+<li><strong><code>Arrays.fill(array, fromIndex, toIndex, value)</code>:</strong> Fills a subarray with a specified value.</li>
+</ul>
+<h3 id="comparing-arrays">Comparing Arrays</h3>
+<ul>
+<li><strong><code>Arrays.equals(array1, array2)</code>:</strong> Compares two arrays for equality.</li>
+</ul>
+<h3 id="example-usage">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Arrays<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> numbers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Assign values</span>
+        numbers<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+        numbers<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+        numbers<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+        numbers<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">40</span><span class="token punctuation">;</span>
+        numbers<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Access an element</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>numbers<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Modify an element</span>
+        numbers<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Get the array length</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Array length: "</span> <span class="token operator">+</span> numbers<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Sort the array</span>
+        Arrays<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Search for an element</span>
+        <span class="token keyword">int</span> index <span class="token operator">=</span> Arrays<span class="token punctuation">.</span><span class="token function">binarySearch</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Index of 30: "</span> <span class="token operator">+</span> index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Fill the array with a value</span>
+        Arrays<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Print the array</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>Arrays<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="map-treemap--hashmap">Map, TreeMap, &amp; HashMap</h2>
+<h3 id="basic-operations">Basic Operations</h3>
+<ul>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the map.</li>
+<li><strong><code>containsKey(key)</code>:</strong> Checks if the map contains the specified key.</li>
+<li><strong><code>containsValue(value)</code>:</strong> Checks if the map contains the specified value.</li>
+<li><strong><code>entrySet()</code>:</strong> Returns a set of all entries in the map.</li>
+<li><strong><code>get(key)</code>:</strong> Returns the value associated with the specified key, or <code>null</code> if the key is not found.</li>
+<li><strong><code>isEmpty()</code>:</strong> Checks if the map is empty.</li>
+<li><strong><code>keySet()</code>:</strong> Returns a set of all keys in the map.</li>
+<li><strong><code>put(key, value)</code>:</strong> Associates the specified value with the specified key.</li>
+<li><strong><code>putAll(map)</code>:</strong> Copies all key-value pairs from another map into this map.</li>
+<li><strong><code>remove(key)</code>:</strong> Removes the mapping for the specified key if present.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of key-value pairs in the map.</li>
+<li><strong><code>values()</code>:</strong> Returns a collection of all values in the map.</li>
+</ul>
+<h3 id="specific-implementations">Specific Implementations</h3>
+<p><strong>HashMap:</strong></p>
+<ul>
+<li>Unordered hash table implementation.</li>
+<li>Fast for most operations.</li>
+<li>Allows null keys and values.</li>
+</ul>
+<p><strong>TreeMap:</strong></p>
+<ul>
+<li>Red-black tree implementation.</li>
+<li>Sorts keys in ascending order.</li>
+<li>Does not allow null keys.</li>
+</ul>
+<p><strong>LinkedHashMap:</strong></p>
+<ul>
+<li>Extends HashMap and maintains insertion order or access order.</li>
+<li>Useful for caching or maintaining order.</li>
+</ul>
+<h3 id="example-usage-1">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashMap<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Map<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MapExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Integer<span class="token operator">&gt;</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Add elements</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"orange"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Get a value</span>
+        <span class="token keyword">int</span> appleCount <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Apple count: "</span> <span class="token operator">+</span> appleCount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Check if a key exists</span>
+        <span class="token keyword">boolean</span> containsBanana <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Contains banana: "</span> <span class="token operator">+</span> containsBanana<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Iterate over key-value pairs</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>Map<span class="token punctuation">.</span>Entry<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Integer<span class="token operator">&gt;</span> entry <span class="token operator">:</span> map<span class="token punctuation">.</span><span class="token function">entrySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            String key <span class="token operator">=</span> entry<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> value <span class="token operator">=</span> entry<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>key <span class="token operator">+</span> <span class="token string">": "</span> <span class="token operator">+</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="set">Set</h2>
+<h3 id="java-set-functions">Java Set Functions</h3>
+<h3 id="basic-operations-1">Basic Operations</h3>
+<ul>
+<li><strong><code>add(element)</code>:</strong> Adds an element to the set.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the set.</li>
+<li><strong><code>contains(element)</code>:</strong> Checks if the set contains the specified element.</li>
+<li><strong><code>isEmpty()</code>:</strong> Checks if the set is empty.</li>
+<li><strong><code>remove(element)</code>:</strong> Removes the specified element from the set.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the set.</li>
+</ul>
+<h3 id="iterators">Iterators</h3>
+<ul>
+<li><strong><code>iterator()</code>:</strong> Returns an iterator over the elements in the set.</li>
+<li><strong><code>forEach(action)</code>:</strong> Performs an action for each element in the set.</li>
+</ul>
+<h3 id="additional-operations">Additional Operations</h3>
+<ul>
+<li><strong><code>addAll(collection)</code>:</strong> Adds all elements from the specified collection to the set.</li>
+<li><strong><code>containsAll(collection)</code>:</strong> Checks if the set contains all elements from the specified collection.</li>
+<li><strong><code>removeAll(collection)</code>:</strong> Removes all elements from the set that are contained in the specified collection.</li>
+<li><strong><code>retainAll(collection)</code>:</strong> Retains only the elements in the set that are also in the specified collection.</li>
+</ul>
+<h3 id="example-usage-2">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>HashSet<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Set<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SetExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Set<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> mySet <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Add elements</span>
+        mySet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mySet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        mySet<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"orange"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Check if an element exists</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>mySet<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Set contains apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// Remove an element</span>
+        mySet<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Iterate over elements</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>String element <span class="token operator">:</span> mySet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="stack">Stack</h2>
+<h3 id="java-stack-methods">Java Stack Methods</h3>
+<h3 id="basic-operations-2">Basic Operations</h3>
+<ul>
+<li><strong><code>empty()</code>:</strong> Checks if the stack is empty.</li>
+<li><strong><code>peek()</code>:</strong> Returns the object at the top of the stack without removing it.</li>
+<li><strong><code>pop()</code>:</strong> Removes the object at the top of the stack and returns it.</li>
+<li><strong><code>push(Object item)</code>:</strong> Pushes an item onto the top of the stack.</li>
+<li><strong><code>search(Object o)</code>:</strong> Returns the 1-based position of the object in the stack. Returns -1 if the object is not found.</li>
+</ul>
+<h3 id="example-usage-3">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Stack<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StackExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Stack<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        stack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"orange"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Top element: "</span> <span class="token operator">+</span> stack<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Popped element: "</span> <span class="token operator">+</span> stack<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Is the stack empty? "</span> <span class="token operator">+</span> stack<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="queue">Queue</h2>
+<h3 id="java-queue-functions">Java Queue Functions</h3>
+<h3 id="basic-operations-3">Basic Operations</h3>
+<ul>
+<li><strong><code>add(E e)</code>:</strong> Inserts the specified element into this queue if it is possible to do so immediately.</li>
+<li><strong><code>offer(E e)</code>:</strong> Inserts the specified element into this queue if it is possible to do so immediately. Returns <code>true</code> if the element was added to the queue, <code>false</code> otherwise.</li>
+<li><strong><code>remove()</code>:</strong> Retrieves and removes the head of this queue.</li>
+<li><strong><code>poll()</code>:</strong> Retrieves and removes the head of this queue, or <code>null</code> if this queue is empty.</li>
+<li><strong><code>element()</code>:</strong> Retrieves, but does not remove, the head of this queue.</li>
+<li><strong><code>peek()</code>:</strong> Retrieves, but does not remove, the head of this queue, or <code>null</code> if this queue is empty.</li>
+</ul>
+<h3 id="additional-operations-1">Additional Operations</h3>
+<ul>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in this queue.</li>
+<li><strong><code>isEmpty()</code>:</strong> Returns <code>true</code> if this queue contains no elements.</li>
+<li><strong><code>contains(Object o)</code>:</strong> Returns <code>true</code> if this queue contains the specified element.</li>
+<li><strong><code>iterator()</code>:</strong> Returns an iterator over the elements in this queue.</li>
+</ul>
+<h3 id="example-usage-4">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>LinkedList<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Queue<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">QueueExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Queue<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Add elements to the queue</span>
+        queue<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        queue<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        queue<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Retrieve and remove the head</span>
+        <span class="token keyword">int</span> removedElement <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Removed element: "</span> <span class="token operator">+</span> removedElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Peek at the head without removing</span>
+        <span class="token keyword">int</span> headElement <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">peek</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Head element: "</span> <span class="token operator">+</span> headElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Check if the queue is empty</span>
+        <span class="token keyword">boolean</span> isEmpty <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Queue is empty: "</span> <span class="token operator">+</span> isEmpty<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="deque">Deque</h2>
+<h3 id="java-deque-functions">Java Deque Functions</h3>
+<h3 id="basic-operations-4">Basic Operations</h3>
+<ul>
+<li><strong><code>addFirst(E e)</code>:</strong> Inserts an element at the front of the deque.</li>
+<li><strong><code>addLast(E e)</code>:</strong> Inserts an element at the end of the deque.</li>
+<li><strong><code>getFirst()</code>:</strong> Retrieves the first element of the deque without removing it.</li>
+<li><strong><code>getLast()</code>:</strong> Retrieves the last element of the deque without removing it.</li>
+<li><strong><code>removeFirst()</code>:</strong> Removes and returns the first element of the deque.</li>
+<li><strong><code>removeLast()</code>:</strong> Removes and returns the last element of the deque.</li>
+<li><strong><code>peekFirst()</code>:</strong> Retrieves the first element of the deque without removing it, or <code>null</code> if the deque is empty.</li>
+<li><strong><code>peekLast()</code>:</strong> Retrieves the last element of the deque without removing it, or <code>null</code> if the deque is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the deque.</li>
+<li><strong><code>isEmpty()</code>:</strong> Checks if the deque is empty.</li>
+</ul>
+<h3 id="additional-operations-2">Additional Operations</h3>
+<ul>
+<li><strong><code>offerFirst(E e)</code>:</strong> Inserts an element at the front of the deque if possible, returning <code>true</code> if successful or <code>false</code> if the deque is full.</li>
+<li><strong><code>offerLast(E e)</code>:</strong> Inserts an element at the end of the deque if possible, returning <code>true</code> if successful or <code>false</code> if the deque is full.</li>
+<li><strong><code>pollFirst()</code>:</strong> Removes and returns the first element of the deque, or <code>null</code> if the deque is empty.</li>
+<li><strong><code>pollLast()</code>:</strong> Removes and returns the last element of the deque, or <code>null</code> if the deque is empty.</li>
+</ul>
+<h3 id="example-usage-5">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>Deque<span class="token punctuation">;</span>
+<span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>LinkedList<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DequeExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Deque<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span> deque <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Add elements</span>
+        deque<span class="token punctuation">.</span><span class="token function">addFirst</span><span class="token punctuation">(</span><span class="token string">"A"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        deque<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span><span class="token string">"B"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        deque<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span><span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Access elements</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>deque<span class="token punctuation">.</span><span class="token function">getFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: A</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>deque<span class="token punctuation">.</span><span class="token function">getLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: C</span>
+
+        <span class="token comment">// Remove elements</span>
+        deque<span class="token punctuation">.</span><span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        deque<span class="token punctuation">.</span><span class="token function">removeLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Check if empty</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>deque<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Output: true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="heap">Heap</h2>
+<h3 id="java-heap-data-structure">Java Heap Data Structure</h3>
+<p><strong>Heap</strong> is a complete binary tree with the property that the value of any node is greater than (or less than) the values of its children. There are two types of heaps:</p>
+<ul>
+<li><strong>Max heap:</strong> The value of any node is greater than or equal to the values of its children.</li>
+<li><strong>Min heap:</strong> The value of any node is less than or equal to the values of its children.</li>
+</ul>
+<p><strong>Note:</strong> Java doesn’t have a built-in heap class, but you can implement it using <code>PriorityQueue</code> class.</p>
+<h3 id="priorityqueue-class-methods"><code>PriorityQueue</code> Class Methods</h3>
+<h4 id="basic-operations-5">Basic Operations</h4>
+<ul>
+<li><strong><code>PriorityQueue()</code>:</strong> Creates an empty priority queue.</li>
+<li><strong><code>PriorityQueue(Collection&lt;? extends E&gt; c)</code>:</strong> Creates a priority queue containing the elements of the specified collection.</li>
+<li><strong><code>PriorityQueue(int initialCapacity)</code>:</strong> Creates a priority queue with the specified initial capacity.</li>
+<li><strong><code>PriorityQueue(int initialCapacity, Comparator&lt;? super E&gt; comparator)</code>:</strong> Creates a priority queue with the specified initial capacity and comparator.</li>
+<li><strong><code>add(E e)</code>:</strong> Inserts the specified element into this priority queue.</li>
+<li><strong><code>offer(E e)</code>:</strong> Inserts the specified element into this priority queue if it is possible to do so immediately without violating the capacity restrictions.</li>
+<li><strong><code>poll()</code>:</strong> Retrieves and removes the head of this queue, or returns <code>null</code> if this queue is empty.</li>
+<li><strong><code>remove()</code>:</strong> Removes the head of this queue.</li>
+<li><strong><code>peek()</code>:</strong> Retrieves, but does not remove, the head of this queue, or returns <code>null</code> if this queue is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in this queue.</li>
+</ul>
+<h4 id="additional-operations-3">Additional Operations</h4>
+<ul>
+<li><strong><code>comparator()</code>:</strong> Returns the comparator used to order the elements in this queue, or <code>null</code> if the natural ordering is used.</li>
+<li><strong><code>contains(Object o)</code>:</strong> Returns <code>true</code> if this queue contains the specified element.</li>
+<li><strong><code>toArray()</code>:</strong> Returns an array containing all of the elements in this queue.</li>
+<li><strong><code>toArray(T[] a)</code>:</strong> Returns an array containing all of the elements in this queue, using the given array as much as possible.</li>
+</ul>
+<h3 id="example-usage-6">Example Usage:</h3>
+<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">import</span> java<span class="token punctuation">.</span>util<span class="token punctuation">.</span>PriorityQueue<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HeapExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        PriorityQueue<span class="token operator">&lt;</span>Integer<span class="token operator">&gt;</span> maxHeap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> b <span class="token operator">-</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Create a max heap</span>
+
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Max Heap: "</span> <span class="token operator">+</span> maxHeap<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Remove the maximum element</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Removed: "</span> <span class="token operator">+</span> maxHeap<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// Check if the heap is empty</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Is empty: "</span> <span class="token operator">+</span> maxHeap<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</body>
+
+</html>

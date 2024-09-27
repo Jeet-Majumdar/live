@@ -1,0 +1,661 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code C++</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h2 id="vectors">Vectors</h2>
+<pre class=" language-cpp"><code class="prism  language-cpp">std<span class="token operator">::</span>vector<span class="token operator">&lt;</span>dataType<span class="token operator">&gt;</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">{</span> value1<span class="token punctuation">,</span> value2<span class="token punctuation">,</span> value3<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+std<span class="token operator">::</span>vector<span class="token operator">&lt;</span>dataType<span class="token operator">&gt;</span> <span class="token function">name</span><span class="token punctuation">(</span>other_vec<span class="token punctuation">)</span><span class="token punctuation">;</span>
+std<span class="token operator">::</span>vector<span class="token operator">&lt;</span>dataType<span class="token operator">&gt;</span> <span class="token function">name</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="c-vector-functions">C++ Vector Functions</h3>
+<h3 id="basic-operations">Basic Operations</h3>
+<ul>
+<li><strong><code>begin()</code>:</strong> Returns an iterator to the first element.</li>
+<li><strong><code>end()</code>:</strong> Returns an iterator to the past-the-end element.</li>
+<li><strong><code>rbegin()</code>:</strong> Returns a reverse iterator to the last element.</li>
+<li><strong><code>rend()</code>:</strong> Returns a reverse iterator to the past-the-end element in reverse order.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the vector.</li>
+<li><strong><code>empty()</code>:</strong> Checks if the vector is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the vector.</li>
+<li><strong><code>max_size()</code>:</strong> Returns the maximum possible size of the vector.</li>
+<li><strong><code>capacity()</code>:</strong> Returns the current capacity of the vector.</li>
+<li><strong><code>reserve()</code>:</strong> Resizes the vector’s capacity.</li>
+</ul>
+<h3 id="element-access">Element Access</h3>
+<ul>
+<li><strong><code>operator[]</code>:</strong> Accesses an element.</li>
+<li><strong><code>at()</code>:</strong> Accesses an element, throwing an exception if out of bounds.</li>
+<li><strong><code>front()</code>:</strong> Returns a reference to the first element.</li>
+<li><strong><code>back()</code>:</strong> Returns a reference to the last element.</li>
+</ul>
+<h3 id="modifiers">Modifiers</h3>
+<ul>
+<li><strong><code>push_back()</code>:</strong> Adds an element to the end.</li>
+<li><strong><code>pop_back()</code>:</strong> Removes the last element.</li>
+<li><strong><code>insert()</code>:</strong> Inserts elements at a specified position.</li>
+<li><strong><code>erase()</code>:</strong> Removes elements at a specified position or range.</li>
+<li><strong><code>swap()</code>:</strong> Exchanges the contents of two vectors.</li>
+</ul>
+<h3 id="iterators">Iterators</h3>
+<ul>
+<li><strong><code>iterator</code>:</strong> A bidirectional iterator to elements in the vector.</li>
+<li><strong><code>reverse_iterator</code>:</strong> A bidirectional iterator to elements in the vector in reverse order.</li>
+</ul>
+<h3 id="c-vector-iterator-functions">C++ Vector Iterator Functions</h3>
+<ul>
+<li><strong><code>operator*</code>:</strong> Dereferences the iterator to get the value.</li>
+<li><strong><code>operator-&gt;value</code>:</strong> Dereferences the iterator to get a pointer to the value.</li>
+<li><strong><code>operator++</code>:</strong> Increments the iterator to the next element.</li>
+<li><strong><code>operator--</code>:</strong> Decrements the iterator to the previous element.</li>
+<li><strong><code>operator==()</code>:</strong> Compares two iterators for equality.</li>
+<li><strong><code>operator!=()</code>:</strong> Compares two iterators for inequality.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> myVector<span class="token punctuation">;</span>
+
+    <span class="token comment">// Add elements</span>
+    myVector<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myVector<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myVector<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>myVector<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access elements</span>
+    cout <span class="token operator">&lt;&lt;</span> myVector<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> myVector<span class="token punctuation">.</span><span class="token function">at</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// Iterate over elements</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">:</span> myVector<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="maps">Maps</h2>
+<p>Ordered/Unordered<br>
+Ordered = <code>map</code><br>
+Unordered = <code>unordered_map</code></p>
+<h3 id="c-map-functions">C++ Map Functions</h3>
+<h3 id="basic-operations-1">Basic Operations</h3>
+<ul>
+<li><strong><code>begin()</code>:</strong> Returns an iterator to the first element.</li>
+<li><strong><code>end()</code>:</strong> Returns an iterator to the past-the-end element.</li>
+<li><strong><code>rbegin()</code>:</strong> Returns a reverse iterator to the last element.</li>
+<li><strong><code>rend()</code>:</strong> Returns a reverse iterator to the past-the-end element in reverse order.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the map.</li>
+<li><strong><code>empty()</code>:</strong> Checks if the map is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the map.</li>
+</ul>
+<h3 id="element-access-1">Element Access</h3>
+<ul>
+<li><strong><code>operator[]</code>:</strong> Accesses an element, inserting a new element with the default value if it doesn’t exist.</li>
+<li><strong><code>at()</code>:</strong> Accesses an element, throwing an exception if it doesn’t exist.</li>
+<li><strong><code>count()</code>:</strong> Returns the number of elements with the specified key.</li>
+<li><strong><code>find()</code>:</strong> Returns an iterator to the element with the specified key, or <code>end()</code> if not found.</li>
+<li><strong><code>erase()</code>:</strong> Removes an element by key or iterator.</li>
+</ul>
+<h3 id="modifiers-1">Modifiers</h3>
+<ul>
+<li><strong><code>insert()</code>:</strong> Inserts a new element.</li>
+<li><strong><code>emplace()</code>:</strong> Constructs a new element in-place.</li>
+<li><strong><code>swap()</code>:</strong> Exchanges the contents of two maps.</li>
+</ul>
+<h3 id="iterators-1">Iterators</h3>
+<ul>
+<li><strong><code>iterator</code>:</strong> A bidirectional iterator to elements in the map.</li>
+<li><strong><code>reverse_iterator</code>:</strong> A bidirectional iterator to elements in the map in reverse order.</li>
+</ul>
+<h3 id="c-map-iterator-functions">C++ Map Iterator Functions</h3>
+<ul>
+<li><strong><code>operator*</code>:</strong> Dereferences the iterator to get the value.</li>
+<li><strong><code>operator-&gt;second</code>:</strong> Dereferences the iterator to get a pointer to the value.</li>
+<li><strong><code>operator++</code>:</strong> Increments the iterator to the next element.</li>
+<li><strong><code>operator--</code>:</strong> Decrements the iterator to the previous element.</li>
+<li><strong><code>operator==()</code>:</strong> Compares two iterators for equality.</li>
+<li><strong><code>operator!=()</code>:</strong> Compares two iterators for inequality.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;map&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    map<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> myMap<span class="token punctuation">;</span>
+
+    <span class="token comment">// Insert elements</span>
+    myMap<span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    myMap<span class="token punctuation">[</span><span class="token string">"banana"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    myMap<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"orange"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access elements</span>
+    cout <span class="token operator">&lt;&lt;</span> myMap<span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> myMap<span class="token punctuation">.</span><span class="token function">at</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// Find elements</span>
+    <span class="token keyword">auto</span> it <span class="token operator">=</span> myMap<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">"orange"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>it <span class="token operator">!=</span> myMap<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it<span class="token operator">-</span><span class="token operator">&gt;</span>first <span class="token operator">&lt;&lt;</span> <span class="token string">": "</span> <span class="token operator">&lt;&lt;</span> it<span class="token operator">-</span><span class="token operator">&gt;</span>second <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Iterate over elements</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">:</span> myMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it<span class="token punctuation">.</span>first <span class="token operator">&lt;&lt;</span> <span class="token string">": "</span> <span class="token operator">&lt;&lt;</span> it<span class="token punctuation">.</span>second <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="stacks">Stacks</h2>
+<h3 id="c-stack-functions">C++ Stack Functions</h3>
+<h3 id="basic-operations-2">Basic Operations</h3>
+<ul>
+<li><strong><code>empty()</code>:</strong> Checks if the stack is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the stack.</li>
+<li><strong><code>top()</code>:</strong> Returns a reference to the top element (throws an exception if empty).</li>
+<li><strong><code>push()</code>:</strong> Adds an element to the top of the stack.</li>
+<li><strong><code>pop()</code>:</strong> Removes the top element (throws an exception if empty).</li>
+</ul>
+<h3 id="modifiers-2">Modifiers</h3>
+<ul>
+<li><strong><code>swap()</code>:</strong> Exchanges the contents of two stacks.</li>
+</ul>
+<h3 id="c-stack-iterator-functions">C++ Stack Iterator Functions</h3>
+<p><strong>Note:</strong> Stacks do not have built-in iterators. This is because stacks are designed for last-in-first-out (LIFO) access, and iterating over all elements would violate this principle.</p>
+<p><strong>Alternative Approach:</strong></p>
+<p>If you need to iterate over elements in a stack-like manner, you can use a <code>std::vector</code> or <code>std::deque</code> and implement stack operations manually:</p>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyStack</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> data<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">bool</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token function">runtime_error</span><span class="token punctuation">(</span><span class="token string">"Stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">int</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token function">runtime_error</span><span class="token punctuation">(</span><span class="token string">"Stack is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        data<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Iterator</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">::</span>iterator <span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">::</span>iterator <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    MyStack myStack<span class="token punctuation">;</span>
+
+    myStack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myStack<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Iterate over elements (using a vector iterator)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">=</span> myStack<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> it <span class="token operator">!=</span> myStack<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">++</span>it<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>it <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="deque">Deque</h2>
+<h3 id="c-deque-functions">C++ Deque Functions</h3>
+<h3 id="basic-operations-3">Basic Operations</h3>
+<ul>
+<li><strong><code>begin()</code>:</strong> Returns an iterator to the first element.</li>
+<li><strong><code>end()</code>:</strong> Returns an iterator to the past-the-end element.</li>
+<li><strong><code>rbegin()</code>:</strong> Returns a reverse iterator to the last element.</li>
+<li><strong><code>rend()</code>:</strong> Returns a reverse iterator to the past-the-end element in reverse order.</li>
+<li><strong><code>empty()</code>:</strong> Checks if the deque is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the deque.</li>
+<li><strong><code>max_size()</code>:</strong> Returns the maximum possible size of the deque.</li>
+<li><strong><code>front()</code>:</strong> Returns a reference to the first element.</li>
+<li><strong><code>back()</code>:</strong> Returns a reference to the last element.</li>
+</ul>
+<h3 id="modifiers-3">Modifiers</h3>
+<ul>
+<li><strong><code>push_front()</code>:</strong> Adds an element to the front.</li>
+<li><strong><code>push_back()</code>:</strong> Adds an element to the back.</li>
+<li><strong><code>pop_front()</code>:</strong> Removes the first element.</li>
+<li><strong><code>pop_back()</code>:</strong> Removes the last element.</li>
+<li><strong><code>insert()</code>:</strong> Inserts elements at a specified position.</li>
+<li><strong><code>erase()</code>:</strong> Removes elements at a specified position or range.</li>
+<li><strong><code>swap()</code>:</strong> Exchanges the contents of two deques.</li>
+</ul>
+<h3 id="iterators-2">Iterators</h3>
+<ul>
+<li><strong><code>iterator</code>:</strong> A bidirectional iterator to elements in the deque.</li>
+<li><strong><code>reverse_iterator</code>:</strong> A bidirectional iterator to elements in the deque in reverse order.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;deque&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    deque<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> myDeque<span class="token punctuation">;</span>
+
+    <span class="token comment">// Add elements</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">push_front</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>myDeque<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access elements</span>
+    cout <span class="token operator">&lt;&lt;</span> myDeque<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> myDeque<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// Iterate over elements</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">:</span> myDeque<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="sets">Sets</h2>
+<h3 id="c-set-functions">C++ Set Functions</h3>
+<h3 id="basic-operations-4">Basic Operations</h3>
+<ul>
+<li><strong><code>begin()</code>:</strong> Returns an iterator to the first element.</li>
+<li><strong><code>end()</code>:</strong> Returns an iterator to the past-the-end element.</li>
+<li><strong><code>rbegin()</code>:</strong> Returns a reverse iterator to the last element.</li>
+<li><strong><code>rend()</code>:</strong> Returns a reverse iterator to the past-the-end element in reverse order.</li>
+<li><strong><code>empty()</code>:</strong> Checks if the set is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the set.</li>
+<li><strong><code>max_size()</code>:</strong> Returns the maximum possible size of the set.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the set.</li>
+</ul>
+<h3 id="element-access-2">Element Access</h3>
+<ul>
+<li><strong><code>count()</code>:</strong> Checks if an element exists.</li>
+<li><strong><code>find()</code>:</strong> Returns an iterator to the element if found, otherwise <code>end()</code>.</li>
+<li><strong><code>equal_range()</code>:</strong> Returns a pair of iterators defining the range of elements equal to a given value.</li>
+</ul>
+<h3 id="modifiers-4">Modifiers</h3>
+<ul>
+<li><strong><code>insert()</code>:</strong> Inserts an element.</li>
+<li><strong><code>erase()</code>:</strong> Removes an element or a range of elements.</li>
+<li><strong><code>swap()</code>:</strong> Exchanges the contents of two sets.</li>
+</ul>
+<h3 id="c-set-iterator-functions">C++ Set Iterator Functions</h3>
+<ul>
+<li><strong><code>iterator</code>:</strong> A bidirectional iterator to elements in the set.</li>
+<li><strong><code>reverse_iterator</code>:</strong> A bidirectional iterator to elements in the set in reverse order.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;set&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    set<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> mySet <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Insert an element</span>
+    mySet<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token number">40</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Find an element</span>
+    <span class="token keyword">auto</span> it <span class="token operator">=</span> mySet<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>it <span class="token operator">!=</span> mySet<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Found: "</span> <span class="token operator">&lt;&lt;</span> <span class="token operator">*</span>it <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// Iterate over elements</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">:</span> mySet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="queue">Queue</h2>
+<h3 id="c-queue-functions">C++ Queue Functions</h3>
+<h3 id="basic-operations-5">Basic Operations</h3>
+<ul>
+<li><strong><code>empty()</code>:</strong> Checks if the queue is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the queue.</li>
+<li><strong><code>front()</code>:</strong> Returns a reference to the front element (throws an exception if empty).</li>
+<li><strong><code>back()</code>:</strong> Returns a reference to the back element (throws an exception if empty).</li>
+<li><strong><code>push(element)</code>:</strong> Adds an element to the back of the queue.</li>
+<li><strong><code>pop()</code>:</strong> Removes the front element from the queue (throws an exception if empty).</li>
+</ul>
+<h3 id="other-operations">Other Operations</h3>
+<ul>
+<li><strong><code>swap(other_queue)</code>:</strong> Exchanges the contents of two queues.</li>
+</ul>
+<h3 id="example-usage">Example Usage:</h3>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> myQueue<span class="token punctuation">;</span>
+
+    <span class="token comment">// Add elements to the queue</span>
+    myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myQueue<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access elements</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Front element: "</span> <span class="token operator">&lt;&lt;</span> myQueue<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Back element: "</span> <span class="token operator">&lt;&lt;</span> myQueue<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// Remove elements</span>
+    myQueue<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myQueue<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Check if empty</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>myQueue<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Queue is empty"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Queue is not empty"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h2 id="deque-1">Deque</h2>
+<h3 id="c-deque-functions-1">C++ Deque Functions</h3>
+<h3 id="basic-operations-6">Basic Operations</h3>
+<ul>
+<li><strong><code>begin()</code>:</strong> Returns an iterator to the first element.</li>
+<li><strong><code>end()</code>:</strong> Returns an iterator to the past-the-end element.</li>
+<li><strong><code>rbegin()</code>:</strong> Returns a reverse iterator to the last element.</li>
+<li><strong><code>rend()</code>:</strong> Returns a reverse iterator to the past-the-end element in reverse order.</li>
+<li><strong><code>clear()</code>:</strong> Removes all elements from the deque.</li>
+<li><strong><code>empty()</code>:</strong> Checks if the deque is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the deque.</li>
+<li><strong><code>max_size()</code>:</strong> Returns the maximum possible size of the deque.</li>
+</ul>
+<h3 id="element-access-3">Element Access</h3>
+<ul>
+<li><strong><code>front()</code>:</strong> Returns a reference to the first element.</li>
+<li><strong><code>back()</code>:</strong> Returns a reference to the last element.</li>
+</ul>
+<h3 id="modifiers-5">Modifiers</h3>
+<ul>
+<li><strong><code>push_front(value)</code>:</strong> Inserts an element at the beginning.</li>
+<li><strong><code>push_back(value)</code>:</strong> Inserts an element at the end.</li>
+<li><strong><code>pop_front()</code>:</strong> Removes the first element.</li>
+<li><strong><code>pop_back()</code>:</strong> Removes the last element.</li>
+<li><strong><code>insert(position, value)</code>:</strong> Inserts an element at a specified position.</li>
+<li><strong><code>erase(position)</code>:</strong> Removes an element at a specified position.</li>
+<li><strong><code>erase(first, last)</code>:</strong> Removes a range of elements.</li>
+</ul>
+<h3 id="iterators-3">Iterators</h3>
+<ul>
+<li><strong><code>iterator</code>:</strong> A bidirectional iterator to elements in the deque.</li>
+<li><strong><code>reverse_iterator</code>:</strong> A bidirectional iterator to elements in the deque in reverse order.</li>
+</ul>
+<h3 id="example-usage-1">Example Usage:</h3>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;deque&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    deque<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> myDeque<span class="token punctuation">;</span>
+
+    <span class="token comment">// Insert elements</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">push_front</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    myDeque<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>myDeque<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access elements</span>
+    cout <span class="token operator">&lt;&lt;</span> myDeque<span class="token punctuation">.</span><span class="token function">front</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> myDeque<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token comment">// Iterate over elements</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">:</span> myDeque<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> it <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<h2 id="heap">Heap</h2>
+<h3 id="c-heap-functions">C++ Heap Functions</h3>
+<h3 id="basic-operations-7">Basic Operations</h3>
+<ul>
+<li><strong><code>make_heap(begin, end)</code>:</strong> Creates a max heap from a range of elements.</li>
+<li><strong><code>push_heap(begin, end)</code>:</strong> Pushes an element onto the heap.</li>
+<li><strong><code>pop_heap(begin, end)</code>:</strong> Removes the root element from the heap.</li>
+<li><strong><code>sort_heap(begin, end)</code>:</strong> Sorts a heap into ascending order.</li>
+</ul>
+<h3 id="other-operations-1">Other Operations</h3>
+<ul>
+<li><strong><code>is_heap(begin, end)</code>:</strong> Checks if a range of elements is a heap.</li>
+<li><strong><code>is_heap_until(begin, end)</code>:</strong> Checks if a range of elements is a heap, returning an iterator to the first element that violates the heap property.</li>
+<li><strong><code>nth_element(begin, nth, end)</code>:</strong> Rearranges the elements in a range such that the nth element is in its sorted position.</li>
+</ul>
+<h3 id="example-usage-2">Example Usage:</h3>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Create a max heap</span>
+    <span class="token function">make_heap</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Push an element onto the heap</span>
+    data<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">push_heap</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Pop the root element</span>
+    <span class="token function">pop_heap</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    data<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Sort the heap</span>
+    <span class="token function">sort_heap</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Print the sorted data</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">:</span> data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Making Heap from scratch using Vectors</p>
+<p>A heap is a special kind of binary tree where every node is greater than or equal to (in a max heap) or less than or equal to (in a min heap) its children. This property is called the heap property. Heaps are often used to implement priority queues.</p>
+<h3 id="types-of-heaps">Types of Heaps</h3>
+<ul>
+<li><strong>Max Heap:</strong> Every node is greater than or equal to its children.</li>
+<li><strong>Min Heap:</strong> Every node is less than or equal to its children.</li>
+</ul>
+<h3 id="operations-on-heaps">Operations on Heaps</h3>
+<ul>
+<li><strong>Insertion:</strong> Adds a new element to the heap while maintaining the heap property.</li>
+<li><strong>Deletion:</strong> Removes the root element (maximum or minimum) from the heap and restores the heap property.</li>
+<li><strong>Heapify:</strong> Converts a binary tree into a heap.</li>
+<li><strong>Build Heap:</strong> Constructs a heap from an array of elements.</li>
+</ul>
+<h3 id="implementation-using-vectors">Implementation Using Vectors</h3>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;vector&gt;</span></span>
+
+<span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">typename</span> T<span class="token operator">&gt;</span>
+<span class="token keyword">class</span> <span class="token class-name">Heap</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">explicit</span> <span class="token function">Heap</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token operator">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span><span class="token operator">&amp;</span> elements<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">data</span><span class="token punctuation">(</span>elements<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">buildHeap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">push</span><span class="token punctuation">(</span><span class="token keyword">const</span> T<span class="token operator">&amp;</span> element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">siftUp</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    T <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> std<span class="token operator">::</span><span class="token function">out_of_range</span><span class="token punctuation">(</span><span class="token string">"Heap is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        std<span class="token operator">::</span><span class="token function">swap</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">.</span><span class="token function">back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        data<span class="token punctuation">.</span><span class="token function">pop_back</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">siftDown</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    T <span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> std<span class="token operator">::</span><span class="token function">out_of_range</span><span class="token punctuation">(</span><span class="token string">"Heap is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">bool</span> <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> data<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    std<span class="token operator">::</span>vector<span class="token operator">&lt;</span>T<span class="token operator">&gt;</span> data<span class="token punctuation">;</span>
+
+    <span class="token keyword">void</span> <span class="token function">siftUp</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>index <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> data<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">&gt;</span> data<span class="token punctuation">[</span><span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            std<span class="token operator">::</span><span class="token function">swap</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            index <span class="token operator">=</span> <span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">siftDown</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> largest <span class="token operator">=</span> index<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> leftChild <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> rightChild <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> index <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>leftChild <span class="token operator">&lt;</span> data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> data<span class="token punctuation">[</span>leftChild<span class="token punctuation">]</span> <span class="token operator">&gt;</span> data<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            largest <span class="token operator">=</span> leftChild<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>rightChild <span class="token operator">&lt;</span> data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> data<span class="token punctuation">[</span>rightChild<span class="token punctuation">]</span> <span class="token operator">&gt;</span> data<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            largest <span class="token operator">=</span> rightChild<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>largest <span class="token operator">!=</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            std<span class="token operator">::</span><span class="token function">swap</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">siftDown</span><span class="token punctuation">(</span>largest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">buildHeap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> data<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">siftDown</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre>
+<h2 id="priority-queue">Priority Queue</h2>
+<h3 id="c-priority-queue-functions">C++ Priority Queue Functions</h3>
+<h3 id="basic-operations-8">Basic Operations</h3>
+<ul>
+<li><strong><code>empty()</code>:</strong> Checks if the priority queue is empty.</li>
+<li><strong><code>size()</code>:</strong> Returns the number of elements in the priority queue.</li>
+<li><strong><code>top()</code>:</strong> Returns a reference to the top element (highest priority).</li>
+<li><strong><code>push(value)</code>:</strong> Inserts an element into the priority queue.</li>
+<li><strong><code>pop()</code>:</strong> Removes the top element from the priority queue.</li>
+</ul>
+<h3 id="custom-comparator">Custom Comparator</h3>
+<ul>
+<li><strong><code>priority_queue&lt;T, container, Compare&gt;</code>:</strong> Creates a priority queue using a custom comparator.</li>
+</ul>
+<h3 id="example-usage-3">Example Usage:</h3>
+<pre class=" language-cpp"><code class="prism  language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;queue&gt;</span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">struct</span> Compare <span class="token punctuation">{</span>
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> a <span class="token operator">&gt;</span> b<span class="token punctuation">;</span> <span class="token comment">// Create a min heap</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Create a max heap using the default comparator</span>
+    priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> maxHeap<span class="token punctuation">;</span>
+
+    <span class="token comment">// Create a min heap using a custom comparator</span>
+    priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> Compare<span class="token operator">&gt;</span> minHeap<span class="token punctuation">;</span>
+
+    <span class="token comment">// Add elements to the heaps</span>
+    maxHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    maxHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    maxHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    minHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    minHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    minHeap<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Access and remove elements</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Max Heap: "</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>maxHeap<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> maxHeap<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        maxHeap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Min Heap: "</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>minHeap<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        cout <span class="token operator">&lt;&lt;</span> minHeap<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        minHeap<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+</div>
+</body>
+
+</html>
