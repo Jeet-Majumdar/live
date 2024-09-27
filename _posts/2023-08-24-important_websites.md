@@ -11,8 +11,8 @@ categories: [Research, Tech]
 
 ## Coding
 - Basics DataStructures and Methods: 
- - [C++]({{site.baseurl}}/assets/files/Code_Cpp.html)
- - [Java]({{site.baseurl}}/assets/files/Code_Java.html)
- - [Python]({{site.baseurl}}/assets/files/Code_Python.html)
+    - [C++]({{site.baseurl}}/assets/files/Code_Cpp.html)
+    - [Java]({{site.baseurl}}/assets/files/Code_Java.html)
+    - [Python]({{site.baseurl}}/assets/files/Code_Python.html)
 
 
