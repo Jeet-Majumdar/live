@@ -6,18 +6,19 @@ categories: [Tech]
 
 You can either read out the markup code or download the formula as a file.
 <div>
-</p>
-<p>
 Choose mathematics mode:
-<div>
-<input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
-<label for="inlinemath">Inline 
-(<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)</label><br>
-<input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked" onchange="update_display_mode()">
-<label for="displaymath">Display
-(<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)</label>
+    <div>
+    <input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
+    <label for="inlinemath">Inline 
+        (<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)
+    </label>
+    <br>
+    <input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked" onchange="update_display_mode()">
+    <label for="displaymath">Display
+        (<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)
+    </label>
+    </div>
 </div>
-</p>
 <p>
     Type your LaTeX code below:
 </p>
@@ -48,10 +49,10 @@ Choose mathematics mode:
     </div>
 </div>
 <div id="preview_container" style="visibility: visible; display: block;">
-	In-browser <span class="output_format">MathML</span> preview:
-    <br>
-	<div id="preview_area">
-        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+In-browser <span class="output_format">MathML</span> preview:
+<br>
+<div id="preview_area">
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
 <merror data-mjx-error="Missing or unrecognized delimiter for \left ">
 <mtext>Missing or unrecognized delimiter for \left </mtext>
 </merror>
