@@ -5,7 +5,7 @@ categories: [Tech]
 ---
 
 You can either read out the markup code or download the formula as a file.
-
+<div>
 </p>
 <p>
 Choose mathematics mode:
@@ -52,19 +52,20 @@ Choose mathematics mode:
     <br>
 	<div id="preview_area">
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <merror data-mjx-error="Missing or unrecognized delimiter for left \ ">
-                <mtext>Missing or unrecognized delimiter for left \</mtext>
-            </merror>
-        </math>
-    </div>
-        <p>
-        Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
-        </p>
-	</div>
-    <div id="source_container" style="visibility: collapse; display: none;">
-        <span class="output_format">MathML</span> markup: <br>
-        <textarea id="source_area" name="output" rows="20" cols="60"></textarea>
-    </div>
+<merror data-mjx-error="Missing or unrecognized delimiter for \left ">
+<mtext>Missing or unrecognized delimiter for \left </mtext>
+</merror>
+</math>
+</div>
+<p>
+Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
+</p>
+</div>
+<div id="source_container" style="visibility: collapse; display: none;">
+<span class="output_format">MathML</span> markup: <br>
+<textarea id="source_area" name="output" rows="20" cols="60"></textarea>
+</div>
+</div>
 </div>
 <script>
 //==============================================================================
