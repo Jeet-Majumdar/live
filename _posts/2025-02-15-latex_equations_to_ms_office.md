@@ -9,65 +9,63 @@ You can either read out the markup code or download the formula as a file.
 <div>
 Choose mathematics mode:
     <div>
-    <input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
-    <label for="inlinemath">Inline 
-        (<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)
-    </label>
-    <br>
-    <input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked" onchange="update_display_mode()">
-    <label for="displaymath">Display
-        (<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)
-    </label>
+        <input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
+        <label for="inlinemath">Inline 
+            (<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)
+        </label>
+        <br>
+        <input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked" onchange="update_display_mode()">
+        <label for="displaymath">Display
+            (<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)
+        </label>
     </div>
-</div>
-<p>
-    Type your LaTeX code below:
-</p>
-<div id="controls">
-    <div id="input_area">
-        <span class="delimiter">$$</span>
-        <textarea id="latex_input" name="latex_input" rows="3" cols="40" placeholder="Type LaTeX here"></textarea>
-        <span class="delimiter">$$</span>
+    <p>
+        Type your LaTeX code below:
+    </p>
+    <div id="controls">
+        <div id="input_area">
+            <span class="delimiter">$$</span>
+            <textarea id="latex_input" name="latex_input" rows="3" cols="40" placeholder="Type LaTeX here"></textarea>
+            <span class="delimiter">$$</span>
+        </div>
+        <div id="buttons">
+            <div class="button-column">
+            <b>MathML functions</b>
+            <button onclick="process_mathml(false);">Preview</button>
+            <button onclick="process_mathml(true);">Show code</button>
+            <button onclick="download_mathml();">Save as file</button>
+            </div>
+            <div class="button-column">
+            <b>SVG functions</b>
+            <button onclick="process_svg(false);">Preview</button>
+            <button onclick="process_svg(true);">Show code</button>
+            <button onclick="download_svg();">Save as file</button>
+            </div>
+            <div class="button-column">
+            <b>Reset</b>
+            <button onclick="clear_input();">Clear input</button>
+            <button onclick="clear_output();">Clear output</button>
+            </div>
+        </div>
     </div>
-    <div id="buttons">
-        <div class="button-column">
-        <b>MathML functions</b>
-        <button onclick="process_mathml(false);">Preview</button>
-        <button onclick="process_mathml(true);">Show code</button>
-        <button onclick="download_mathml();">Save as file</button>
+    <div id="preview_container" style="visibility: visible; display: block;">
+        In-browser <span class="output_format">MathML</span> preview:
+        <br>
+        <div id="preview_area">
+            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <merror data-mjx-error="Missing or unrecognized delimiter for \left ">
+                    <mtext>Missing or unrecognized delimiter for \left </mtext>
+                </merror>
+            </math>
         </div>
-        <div class="button-column">
-        <b>SVG functions</b>
-        <button onclick="process_svg(false);">Preview</button>
-        <button onclick="process_svg(true);">Show code</button>
-        <button onclick="download_svg();">Save as file</button>
-        </div>
-        <div class="button-column">
-        <b>Reset</b>
-        <button onclick="clear_input();">Clear input</button>
-        <button onclick="clear_output();">Clear output</button>
-        </div>
+        <p>
+            Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
+        </p>
     </div>
-</div>
-<div id="preview_container" style="visibility: visible; display: block;">
-In-browser <span class="output_format">MathML</span> preview:
-<br>
-<div id="preview_area">
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-<merror data-mjx-error="Missing or unrecognized delimiter for \left ">
-<mtext>Missing or unrecognized delimiter for \left </mtext>
-</merror>
-</math>
-</div>
-<p>
-Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
-</p>
-</div>
-<div id="source_container" style="visibility: collapse; display: none;">
-<span class="output_format">MathML</span> markup: <br>
-<textarea id="source_area" name="output" rows="20" cols="60"></textarea>
-</div>
-</div>
+    <div id="source_container" style="visibility: collapse; display: none;">
+        <span class="output_format">MathML</span> markup: <br>
+        <textarea id="source_area" name="output" rows="20" cols="60"></textarea>
+    </div>
 </div>
 <script>
 //==============================================================================
