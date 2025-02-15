@@ -11,8 +11,7 @@ categories: [Tech]
 <div id="controls">
     <div id="input_area">
         <span class="delimiter">$$</span>
-        <textarea id="latex_input" name="latex_input" rows="3" cols="40" 
-            placeholder"Type LaTeX here"></textarea>
+        <textarea id="latex_input" name="latex_input" rows="3" cols="40" placeholder="Type LaTeX here"></textarea>
         <span class="delimiter">$$</span>
     </div>
     <div id="buttons">
