@@ -4,7 +4,20 @@ title: Latex equations to MS-Office - Word & Powerpoint
 categories: [Tech]
 ---
 
+You can either read out the markup code or download the formula as a file.
 
+</p>
+<p>
+Choose mathematics mode:
+<div>
+<input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
+<label for="inlinemath">Inline 
+(<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)</label><br>
+<input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked" onchange="update_display_mode()">
+<label for="displaymath">Display
+(<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)</label>
+</div>
+</p>
 <p>
     Type your LaTeX code below:
 </p>
@@ -39,8 +52,8 @@ categories: [Tech]
     <br>
 	<div id="preview_area">
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <merror data-mjx-error="Missing or unrecognized delimiter for \left">
-                <mtext>Missing or unrecognized delimiter for \left</mtext>
+            <merror data-mjx-error="Missing or unrecognized delimiter for left">
+                <mtext>Missing or unrecognized delimiter for left</mtext>
             </merror>
         </math>
     </div>
