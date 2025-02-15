@@ -8,30 +8,30 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
 
   <!-- CSS -->
-  
+
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  
+
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/website_jeet_icon.png">
-                                 <link rel="shortcut icon" href="{{ site.baseurl }}public/website_jeet_icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/website_jeet_icon.png">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-  
+
   <!-- <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } }); </script>
   <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -42,6 +42,14 @@
     });
   </script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+      loader: { load: ['input/tex', 'output/svg', 'ui/safe'] }
+    };
+  </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
