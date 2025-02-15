@@ -5,6 +5,7 @@ categories: [Tech]
 ---
 
 You can either read out the markup code or download the formula as a file.
+
 <div>
 Choose mathematics mode:
     <div>
