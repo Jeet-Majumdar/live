@@ -52,8 +52,8 @@ Choose mathematics mode:
     <br>
 	<div id="preview_area">
         <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-            <merror data-mjx-error="Missing or unrecognized delimiter for left">
-                <mtext>Missing or unrecognized delimiter for left</mtext>
+            <merror data-mjx-error="Missing or unrecognized delimiter for left \ ">
+                <mtext>Missing or unrecognized delimiter for left \</mtext>
             </merror>
         </math>
     </div>
@@ -65,7 +65,6 @@ Choose mathematics mode:
         <span class="output_format">MathML</span> markup: <br>
         <textarea id="source_area" name="output" rows="20" cols="60"></textarea>
     </div>
-	<script type="text/javascript">update_display_mode();</script>
 </div>
 <script>
 //==============================================================================
@@ -267,3 +266,4 @@ function download_mathml()
 	anchor.click();
 }
 </script>
+<script type="text/javascript">update_display_mode();</script>
