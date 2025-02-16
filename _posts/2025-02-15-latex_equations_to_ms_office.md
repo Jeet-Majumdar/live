@@ -35,14 +35,14 @@ Choose mathematics mode:
                 <button onclick="process_mathml(true);">Show code</button>
                 <button onclick="download_mathml();">Save as file</button>
             </div>
-            <div class="button-column">
+            <!-- <div class="button-column">
                 <b>SVG functions</b>
                 <button onclick="process_svg(false);">Preview</button>
                 <button onclick="process_svg(true);">Show code</button>
                 <button onclick="download_svg();">Save as file</button>
-            </div>
+            </div> -->
             <div class="button-column">
-                <b>Reset</b>
+                <b style="color: red;">Reset</b>
                 <button onclick="clear_input();">Clear input</button>
                 <button onclick="clear_output();">Clear output</button>
             </div>
