@@ -30,7 +30,7 @@ Choose mathematics mode:
         </div>
         <div id="buttons">
             <div class="button-column">
-                <b>MathML functions</b>
+                <b style="color: green;">MathML Options</b>
                 <button onclick="process_mathml(false);">Preview</button>
                 <button onclick="process_mathml(true);">Show code</button>
                 <button onclick="download_mathml();">Save as file</button>
@@ -49,7 +49,7 @@ Choose mathematics mode:
         </div>
     </div>
     <div id="preview_container" style="visibility: visible; display: block;">
-        In-browser <span class="output_format">MathML</span> preview:
+        Preview:
         <br>
         <div id="preview_area">
             <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
@@ -268,3 +268,5 @@ function download_mathml()
 }
 </script>
 <script type="text/javascript">update_display_mode();</script>
+
+Copy the Math
