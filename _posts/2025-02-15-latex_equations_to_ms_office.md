@@ -203,7 +203,7 @@ function process_svg(show_src)
 		return;
 	let latex = input.value;
 	let output = window.MathJax.tex2svg(latex, {display: display_mode}).innerHTML;
-    console.log(output);
+    
 	preview(output, 'SVG');
 	if (show_src)
 	{
