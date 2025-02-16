@@ -58,9 +58,11 @@ Choose mathematics mode:
                 </merror>
             </math>
         </div>
-        <p>
-            Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
-        </p>
+        <a href="https://www.mathjax.org">
+            <img title="Powered by MathJax"
+            src="https://www.mathjax.org/badge/badge.gif"
+            border="0" alt="Powered by MathJax" />
+        </a>
     </div>
     <div id="source_container" style="visibility: collapse; display: none;">
         <span class="output_format">MathML</span> markup: <br>
@@ -201,6 +203,7 @@ function process_svg(show_src)
 		return;
 	let latex = input.value;
 	let output = window.MathJax.tex2svg(latex, {display: display_mode}).innerHTML;
+    console.log(output);
 	preview(output, 'SVG');
 	if (show_src)
 	{
