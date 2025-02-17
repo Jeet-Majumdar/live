@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Latex equations to MS-Office - Word & Powerpoint</title>
+    <title>Latex equations to SVG</title>
     <meta name="author" content="Jeet Majumdar">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -32,24 +32,24 @@
         processHtmlClass: 'tex2jax_process'
         },
         loader: {
-        load: ['[tex]/noerrors', 'input/tex', 'ui/safe']
+        load: ['input/tex', 'ui/safe', 'output/svg']
         }
     };
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js" id="MathJax-script"></script>
 </head>
 
 <body>
-    <div class="container mt-2 pb-4">
+    <div class="container mt-2">
 
         <div class="page-header">
-            <h1>Latex equations to MS-Office - Word & Powerpoint</h1>
-            <p class="lead">Convert equations written in Latex to equations that can be imported to MS-Word and MS-Powerpoint</p>
+            <h1>Latex equations to SVG</h1>
+            <p class="lead">Convert equations written in Latex to equations to SVG file</p>
         </div>
         
-        <div class="container">
+        <div class="container  pb-4">
             <div class="row">
-                <div class="col-md-6">
+                <div class="">
                     <h4><b>Step 1</b></h4>
                     Choose mathematics mode:
                     <div>
@@ -76,22 +76,15 @@
                         </div>
                         <div id="buttons">
                             <div class="button-column">
-                                <b style="color: green;">MathML Options</b>
-                                <button type="button" class="btn btn-info" onclick="process_mathml(false);">Preview</button>
-                                <button type="button" class="btn btn-light" onclick="process_mathml(true);">Show code</button>
-                                <button type="button" id="btn_copy_mathml" class="btn btn-success" 
-                                    onclick="copy_mathml_code_to_clipboard('btn_copy_mathml');">
+                                <b style="color: green;">SVG Options</b>
+                                <button type="button" class="btn btn-info" onclick="process_svg(false);">Preview</button>
+                                <button type="button" class="btn btn-light" onclick="process_svg(true);">Show code</button>
+                                <button type="button" id="btn_copy_svg" class="btn btn-success" 
+                                    onclick="copy_svg_code_to_clipboard('btn_copy_svg');">
                                     Copy
                                 </button>
-                                <button type="button" class="btn btn-dark" onclick="download_mathml();">Save as file</button>
+                                <button type="button" class="btn btn-dark" onclick="jeet_download_svg();">Save as file</button>
                             </div>
-                            <!-- <br>
-                            <div class="button-column">
-                                <b>SVG functions</b>
-                                <button onclick="process_svg(false);">Preview</button>
-                                <button onclick="process_svg(true);">Show code</button>
-                                <button onclick="download_svg();">Save as file</button>
-                            </div> -->
                             <br>
                             <div class="button-column">
                                 <b style="color: red;">Reset</b>
@@ -121,57 +114,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-6">
-                    <div class="row p-2">
-                        <h4><b>Step 2</b></h4>
-                        Copy the MathML code form Step 1 by clicking the button "Copy"
-                    </div>
-
-                    <div class="row p-2">
-                        <h4><b>Step 3</b></h4>
-                        Paste it in MS-Word
-                    </div>
-
-                    <div class="row p-2">
-                        <h4><b>Step 4</b></h4>
-                        Paste the equation from MS-Word to MS-Powerpoint
-                        <br>
-                        <i>(There is no direct way to enter MathML equation into powerpoint as of now.)</i>
-                    </div>
-                </div>
-
             </div>
 
             <br>
 
-            <hr>
-
-            <h2>Alternative Method</h2>
-            <p><i>Doing Manually</i></p>
-            <div class="row">
-                To do this , use the following html template file:
-                <br>
-                <div style="border: 2px solid blue;">
-                    <code lang="html" style="color: green;">
-                        &lt;!DOCTYPE html><br>
-                        &lt;html><br>
-                        &lt;head><br>
-                        &lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><br>
-                        &lt;title>tex texample</title><br>
-                        &lt;/head><br>
-                        &lt;body><br>
-                            $$
-                            g_k = \frac{\langle M \rangle}{N \mu^2}
-                            $$
-                            <br>
-                        &lt;/body>
-                        &lt;/html> 
-                    </code>
-                </div>
-                <br>
-                In the above html script, replace the content in $$ with your latex equation and refresh the page in web-browser. 
-                The equation is supposed to get displayed
-            </div>
         </div>
     </div>
 
@@ -304,9 +250,9 @@
         }
 
         function convert_to_mm(SVG_len) {
-            SVG_len.convertToSpecifiedUnits(SVG_len.SVG_LENGTHTYPE_MM);
+            SVG_len.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_MM);
             let dim = SVG_len.valueInSpecifiedUnits * 10.0; // Upscale 10 times
-            SVG_len.newValueSpecifiedUnits(SVG_len.SVG_LENGTHTYPE_MM, dim);
+            SVG_len.newValueSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_MM, dim);
         }
 
         function convert_to_absolute_units(svg_markup) {
@@ -373,15 +319,15 @@
             buttonItem.innerHTML = "Copied!";
         }
 
-        // Copy the MathML markup code
-        function copy_mathml_code_to_clipboard(button_var) {
+        // Copy the SVG code
+        function copy_svg_code_to_clipboard(button_var) {
             let input = document.getElementById('latex_input');
             let buttonItem = document.getElementById(button_var);
 
             if (!is_valid_DOM(input))
                 return;
             let latex = input.value;
-            let output = window.MathJax.tex2mml(latex, { display: display_mode });
+            let output = window.MathJax.tex2svg(latex, { display: display_mode }).innerHTML;
 
             // Copy the text inside the text field
             navigator.clipboard.writeText(output);
@@ -396,6 +342,26 @@
                 let buttonItem = document.getElementById(button_var);
                 buttonItem.innerHTML = "Copy"
             }
+        }
+
+        // Custom Download SVG file
+        function jeet_download_svg(){
+            let input = document.getElementById('latex_input');
+
+            if (!is_valid_DOM(input))
+                return;
+            let latex = input.value;
+            let output = window.MathJax.tex2svg(latex, { display: display_mode }).innerHTML;
+
+            let blobdItem = new Blob([output], { type: "image/svg+xml" });
+            let url = URL.createObjectURL(blobdItem);
+            let link_tag = document.createElement("a");
+            
+            link_tag.setAttribute("download", "Downloaded Successfully");
+            link_tag.href = url;
+            link_tag.click();
+            console.log(blobdItem)
+
         }
     </script>
     <script type="text/javascript">update_display_mode();</script>
