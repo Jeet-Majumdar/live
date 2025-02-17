@@ -9,14 +9,8 @@
     <title>Latex equations to MS-Office - Word & Powerpoint</title>
     <meta name="author" content="Jeet Majumdar">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <script>
     // Converted using:
@@ -53,79 +47,132 @@
             <p class="lead">Convert equations written in Latex to equations that can be imported to MS-Word and MS-Powerpoint</p>
         </div>
         
-        <ul>
-            <li>
-                Choose mathematics mode:
-                <div>
-                    <input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
-                    <label for="inlinemath">Inline
-                        (<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)
-                    </label>
-                    <br>
-                    <input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked"
-                        onchange="update_display_mode()">
-                    <label for="displaymath">Display
-                        (<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)
-                    </label>
-                </div>
-                <p>
-                    Type your LaTeX code below:
-                </p>
-                <div id="controls">
-                    <div id="input_area">
-                        <span class="delimiter">$$</span>
-                        <textarea id="latex_input" name="latex_input" rows="3" cols="40"
-                            placeholder="Type LaTeX here"></textarea>
-                        <span class="delimiter">$$</span>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4><b>Step 1</b></h4>
+                    Choose mathematics mode:
+                    <div>
+                        <input type="radio" id="inlinemath" name="mathstyle" value="$" onchange="update_display_mode()">
+                        <label for="inlinemath">Inline
+                            (<span>$</span>...<span>$</span> or <span>\(</span>...<span>\)</span>)
+                        </label>
+                        <br>
+                        <input type="radio" id="displaymath" name="mathstyle" value="$$" checked="checked"
+                            onchange="update_display_mode()">
+                        <label for="displaymath">Display
+                            (<span>$$</span>...<span>$$</span> or <span>\[</span>...<span>\]</span>)
+                        </label>
                     </div>
-                    <div id="buttons">
-                        <div class="button-column">
-                            <b style="color: green;">MathML Options</b>
-                            <button onclick="process_mathml(false);">Preview</button>
-                            <button onclick="process_mathml(true);">Show code</button>
-                            <button onclick="download_mathml();">Save as file</button>
+                    <p>
+                        Type your LaTeX code below:
+                    </p>
+                    <div id="controls">
+                        <div id="input_area">
+                            <span class="delimiter">$$</span>
+                            <textarea id="latex_input" name="latex_input" rows="3" cols="40"
+                                placeholder="Type LaTeX here"></textarea>
+                            <span class="delimiter">$$</span>
                         </div>
-                        <!-- <div class="button-column">
+                        <div id="buttons">
+                            <div class="button-column">
+                                <b style="color: green;">MathML Options</b>
+                                <button type="button" class="btn btn-info" onclick="process_mathml(false);">Preview</button>
+                                <button type="button" class="btn btn-light" onclick="process_mathml(true);">Show code</button>
+                                <button type="button" id="btn_copy_mathml" class="btn btn-success" 
+                                    onclick="copy_mathml_code_to_clipboard('btn_copy_mathml');">
+                                    Copy
+                                </button>
+                                <button type="button" class="btn btn-dark" onclick="download_mathml();">Save as file</button>
+                            </div>
+                            <!-- <br>
+                            <div class="button-column">
                                 <b>SVG functions</b>
                                 <button onclick="process_svg(false);">Preview</button>
                                 <button onclick="process_svg(true);">Show code</button>
                                 <button onclick="download_svg();">Save as file</button>
                             </div> -->
-                        <div class="button-column">
-                            <b style="color: red;">Reset</b>
-                            <button onclick="clear_input();">Clear input</button>
-                            <button onclick="clear_output();">Clear output</button>
+                            <br>
+                            <div class="button-column">
+                                <b style="color: red;">Reset</b>
+                                <button type="button" class="btn btn-danger" onclick="clear_input();">Clear input</button>
+                                <button type="button" class="btn btn-warning" onclick="clear_output();">Clear output</button>
+                            </div>
+                            <br>
                         </div>
                     </div>
-                </div>
-                <div id="preview_container" style="visibility: visible; display: block;">
-                    Preview:
-                    <br>
-                    <div id="preview_area">
-                        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
-                            <merror data-mjx-error="Missing or unrecognized delimiter for \left ">
-                                <mtext>Missing or unrecognized delimiter for \left </mtext>
-                            </merror>
-                        </math>
+                    <div id="preview_container" style="visibility: visible; display: block;">
+                        Preview:
+                        <br>
+                        <div id="preview_area">
+                            <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                                <merror data-mjx-error="Missing or unrecognized delimiter for \left ">
+                                    <mtext>Missing or unrecognized delimiter for \left </mtext>
+                                </merror>
+                            </math>
+                        </div>
+                        <p>
+                            Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
+                        </p>
                     </div>
-                    <p>
-                        Conversion powered by <a href="https://www.mathjax.org/" title="MathJAX">MathJAX</a>.
-                    </p>
+                    <div id="source_container" style="visibility: collapse; display: none;">
+                        <span class="output_format">MathML</span> markup: <br>
+                        <textarea id="source_area" name="output" rows="5" cols="50"></textarea>
+                    </div>
                 </div>
-                <div id="source_container" style="visibility: collapse; display: none;">
-                    <span class="output_format">MathML</span> markup: <br>
-                    <textarea id="source_area" name="output" rows="20" cols="60"></textarea>
+
+                <div class="col-md-6">
+                    <div class="row p-2">
+                        <h4><b>Step 2</b></h4>
+                        Copy the MathML code form Step 1 by clicking the button "Copy"
+                    </div>
+
+                    <div class="row p-2">
+                        <h4><b>Step 3</b></h4>
+                        Paste it in MS-Word
+                    </div>
+
+                    <div class="row p-2">
+                        <h4><b>Step 4</b></h4>
+                        Paste the equation from MS-Word to MS-Powerpoint
+                        <br>
+                        <i>(There is no direct way to enter MathML equation into powerpoint as of now.)</i>
+                    </div>
                 </div>
-            </li>
 
-            <li>
-                Copy the MathML code
-            </li>
+            </div>
 
-            <li>
-                Paste it in MS-Word
-            </li>
-        </ul>
+            <br>
+
+            <hr>
+
+            <h2>Alternative Method</h2>
+            <p><i>Doing Manually</i></p>
+            <div class="row pb-4">
+                To do this , use the following html template file:
+                <br>
+                <div style="border: 2px solid blue;">
+                    <code lang="html" style="color: green;">
+                        &lt;!DOCTYPE html><br>
+                        &lt;html><br>
+                        &lt;head><br>
+                        &lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><br>
+                        &lt;title>tex texample</title><br>
+                        &lt;/head><br>
+                        &lt;body><br>
+                            $$
+                            g_k = \frac{\langle M \rangle}{N \mu^2}
+                            $$
+                            <br>
+                        &lt;/body>
+                        &lt;/html> 
+                    </code>
+                </div>
+                <br>
+                In the above html script, replace the content in $$ with your latex equation and refresh the page in web-browser. 
+                The equation is supposed to get displayed
+            </div>
+        </div>
     </div>
 
     <script>
@@ -308,6 +355,47 @@
             anchor.title = "Download as MathML file";
             anchor.innerHTML = "Download as MathML file";
             anchor.click();
+        }
+    </script>
+    <script>
+        // Copy element text to clipboard
+        function copyToClipboard(copy_var, button_var){
+            // Select the text field
+            var copyItem = document.getElementById(copy_var);
+            var buttonItem = document.getElementById(button_var);
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyItem.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyItem.value);
+
+            buttonItem.innerHTML = "Copied!";
+        }
+
+        // Copy the MathML markup code
+        function copy_mathml_code_to_clipboard(button_var) {
+            let input = document.getElementById('latex_input');
+            let buttonItem = document.getElementById(button_var);
+
+            if (!is_valid_DOM(input))
+                return;
+            let latex = input.value;
+            let output = window.MathJax.tex2mml(latex, { display: display_mode });
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(output);
+
+            // Alert the copied text
+            // alert("Copied the text: " + output);
+
+            buttonItem.innerHTML = "Copied!";
+            
+            const myTimeout = setTimeout(resetButton, 3000);
+            function resetButton() {
+                let buttonItem = document.getElementById(button_var);
+                buttonItem.innerHTML = "Copy"
+            }
         }
     </script>
     <script type="text/javascript">update_display_mode();</script>
