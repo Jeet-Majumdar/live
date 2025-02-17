@@ -7,9 +7,7 @@ categories: [Research, Tech]
 ## Conversion
 
 - [Energy Unit conversion]({{site.baseurl}}/assets/files/energy_convert.html)
-- [Latex equations to MS-Office - Word & Powerpoint]({{site.baseurl}}/assets/files/latex_equation_to_word_ppt.html)
-    (Conversion to MathML)
-- [Latex equations to SVG image]({{site.baseurl}}/assets/files/latex_equation_to_svg.html)
+- Latex equations conversion [To MS-Office - Word & Powerpoint]({{site.baseurl}}/assets/files/latex_equation_to_word_ppt.html) (Conversion to MathML), [To SVG]({{site.baseurl}}/assets/files/latex_equation_to_svg.html)
 
 ## Coding
 - Basics DataStructures and Methods: 
