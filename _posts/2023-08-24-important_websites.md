@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Important Websites
-categories: [Research, Tech] 
+categories: [Research, Tech, Fin] 
 ---
 
 ## Conversion
@@ -38,7 +38,7 @@ categories: [Research, Tech]
     - [R2D3](http://www.r2d3.us/)
     - [Gregory Gundersen](https://gregorygundersen.com/blog/)
 
-## Maths
+## Pure Maths
 - Matrix:
     - [Introduction to Matrix Methods](https://web.stanford.edu/class/engr108/syllabus.html)
     - [Geogebra Drawing Tool](https://www.geogebra.org/geometry): Great tool for drawing Euclidean geometry diagrams
@@ -56,8 +56,9 @@ categories: [Research, Tech]
 
 
 ## Finance
-    - [SIP and Lumpsum Investment Return Calculator](https://sites.google.com/view/sipswpcalc/home)
-
 - Quant:
     - [Quant Girl](https://quantgirl.blog/blog/)
     - [Math of Finance: Donald Saari](https://open.uci.edu/courses/math_176_math_of_finance.html), University of California, Irvine
+
+- Calculators:
+    - [SIP and Lumpsum Investment Return Calculator](https://sites.google.com/view/sipswpcalc/home)
