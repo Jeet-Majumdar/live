@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Important Websites
-categories: [Research, Tech]
+categories: [Research, Tech, Fin]
 ---
 
 ## Conversion
