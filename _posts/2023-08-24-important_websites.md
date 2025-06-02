@@ -5,7 +5,6 @@ categories: [Research, Tech, Fin]
 ---
 
 ## Conversion
-
 - [Energy Unit conversion]({{site.baseurl}}/assets/files/energy_convert.html)
 - Latex equations conversions: 
     - [To MS-Office - Word & Powerpoint]({{site.baseurl}}/assets/files/latex_equation_to_word_ppt.html)
