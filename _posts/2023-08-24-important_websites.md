@@ -29,10 +29,6 @@ categories: [Research, Tech]
     - [Literature of Statistics](https://web.stanford.edu/class/stats319/#general-reading) - [Dennis Sun](https://dlsun.github.io/teaching.html)
     - [Probability, Mathematical Statistics, Stochastic Processes](http://www.randomservices.org/random/)
 
-- Quant:
-    - [Quant Girl](https://quantgirl.blog/blog/)
-    - [Math of Finance: Donald Saari](https://open.uci.edu/courses/math_176_math_of_finance.html), University of California, Irvine
-
 ## AI/ML
 - Blogs:
     - [AI by Hand](https://aibyhand.substack.com/)
@@ -57,3 +53,11 @@ categories: [Research, Tech]
 
 - Presentation:
     - [Beamer Presentations](https://www.overleaf.com/learn/latex/Beamer_Presentations%3A_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Getting_Started)
+
+
+## Finance
+    - [SIP and Lumpsum Investment Return Calculator](https://sites.google.com/view/sipswpcalc/home)
+
+- Quant:
+    - [Quant Girl](https://quantgirl.blog/blog/)
+    - [Math of Finance: Donald Saari](https://open.uci.edu/courses/math_176_math_of_finance.html), University of California, Irvine
